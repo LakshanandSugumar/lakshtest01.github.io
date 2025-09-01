@@ -5,7 +5,7 @@ tags:
   - tag2
 ---
 
-# (Your Name) Datasheet
+# Lakshanand Sugumar Datasheet
 
 Welcome to the EGR 304 Data Sheet website. This site provides documentation, resources, and examples for EGR 304 projects. Here you will find block diagrams, component selections, schematics, power budgets, and more, all organized for easy access and learning.
 
@@ -22,10 +22,4 @@ This datasheet serves as a template and example for EGR 304 students. Its purpos
 
 ### My Contribution
 
-- Created a test public repostory
--
-- Content should also help an unfamiliar reader navigate to areas of interest. Information like:
-
-To review the details listed of the material used to construct the subsection, you can review it in the ["BOM"](https://embedded-systems-design.github.io/EGR304DataSheetTemplate/03-BOM/BOM/) section of the datasheet.
-
-For all the sections
+- Created a test public repository
