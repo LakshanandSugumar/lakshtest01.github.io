@@ -71,4 +71,4 @@ The Flex Sensor Subsystem plays the role of a sensor-driven control unit. It con
 
 The rotary sensor signals shown on the right are external inputs from another subsystem, not part of this subsystem’s hardware. They are included in the diagram purely to illustrate how this subsystem interfaces with others in the overall system.
 
-![ Flex Sensor Subsystem Block diagram ](individual-block-diagram.png)
+![ Flex Sensor Subsystem Block diagram ](individual_block_diagram.drawio (3).png)
