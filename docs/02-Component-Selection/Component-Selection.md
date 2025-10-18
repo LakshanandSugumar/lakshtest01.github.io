@@ -1,58 +1,101 @@
 ---
-title: Component Selection Example
+title: Component Selection
 ---
 
-## Examples
+# Component Selection (Individual – Flex Sensor Subsystem)
 
-### Style 1
+> **Scope:** This page covers the blocks I own in the system: **Flex Sensor**, **Signal-Conditioning/Voltage Divider**, **5 V Regulator**, **External Power Source**, **Connectors**, and **Microcontroller (short comparison)**.  
+> **Interfaces:** Outputs digital lines **RA1, RB2, RC4** to the Motor Subsystem via Connector 2. Optional external rotary analog input to **RA2/AN2** (not owned here).
 
-> This is the example found in the assignment, uses more html
+## Quick Checklist
 
-*Table 1: Example component selection*
+- [ ] ≥ 3 options per block, each with **photo, descriptive link, cost, pros & cons**
+- [ ] **Choice & Rationale** after each table
+- [ ] **MCU table** included
+- [ ] **Pin table** included and matches block diagram
+- [ ] 5 V regulator thermal note: \( P*\text{diss} = (V*\text{in}-5)\times I\_\text{total} \)
 
-**External Clock Module**
+---
 
-| **Solution**                                                                                                                                                                                      | **Pros**                                                                                                                                    | **Cons**                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| ![](image1.png)<br>Option 1.<br> XC1259TR-ND surface mount crystal<br>$1/each<br>[link to product](http://www.digikey.com/product-detail/en/ECS-40.3-S-5PX-TR/XC1259TR-ND/827366)                 | \* Inexpensive[^1]<br>\* Compatible with PSoC<br>\* Meets surface mount constraint of project                                               | \* Requires external components and support circuitry for interface<br>\* Needs special PCB layout. |
-| ![](image3.png)<br>\* Option 2. <br>\* CTX936TR-ND surface mount oscillator <br>\* $1/each <br>\* [Link to product](http://www.digikey.com/product-detail/en/636L3I001M84320/CTX936TR-ND/2292940) | \* Outputs a square wave <br>\* Stable over operating temperature <br> \* Direct interface with PSoC (no external circuitry required) range | * More expensive <br>\* Slow shipping speed                                                         |
+## Pin Table (this subsystem)
 
-**Choice:** Option 2: CTX936TR-ND surface mount oscillator
+| Function                | PIC Pin       | Notes                                 |
+| ----------------------- | ------------- | ------------------------------------- |
+| Flex sensor ADC         | **RA0 / AN0** | Divider output 0–5 V                  |
+| Rotary sensor ADC (ext) | **RA2 / AN2** | External subsystem; shown for context |
+| Motor control 1 (DO)    | **RA1**       | To motor subsystem via Conn. 2        |
+| Motor control 2 (DO)    | **RB2**       | 〃                                    |
+| Motor control 3 (DO)    | **RC4**       | 〃                                    |
 
-**Rationale:** A clock oscillator is easier to work with because it requires no external circuitry in order to interface with the PSoC. This is particularly important because we are not sure of the electrical characteristics of the PCB, which could affect the oscillation of a crystal. While the shipping speed is slow, according to the website if we order this week it will arrive within 3 weeks.
+---
 
-### Style 2
+<!-- 🔁 DUPLICATE THIS WHOLE SECTION PER BLOCK YOU OWN -->
 
-> Also acceptable, more markdown friendly
+## Block: <NAME THE BLOCK> <!-- e.g., Flex Sensor -->
 
-**External Clock Module**
+**Role:** <One line on what this block does and why it matters>
 
-1. XC1259TR-ND surface mount crystal
+### Options (choose ≥ 3)
 
-    ![](image1.png)
+| Solution                  | Photo                   |  Cost | Link                                          | Pros                          | Cons                |
+| ------------------------- | ----------------------- | ----: | --------------------------------------------- | ----------------------------- | ------------------- |
+| **Option 1: <Part name>** | ![](path/to/photo1.png) | $X.XX | [Short descriptive link](https://example.com) | • <pro 1> • <pro 2> • <pro 3> | • <con 1> • <con 2> |
+| **Option 2: <Part name>** | ![](path/to/photo2.png) | $X.XX | [Short descriptive link](https://example.com) | • …                           | • …                 |
+| **Option 3: <Part name>** | ![](path/to/photo3.png) | $X.XX | [Short descriptive link](https://example.com) | • …                           | • …                 |
 
-    * $1/each
-    * [link to product](http://www.digikey.com/product-detail/en/ECS-40.3-S-5PX-TR/XC1259TR-ND/827366)
+**Choice:** <Option # and part name>
 
-    | Pros                                      | Cons                                                             |
-    | ----------------------------------------- | ---------------------------------------------------------------- |
-    | Inexpensive                               | Requires external components and support circuitry for interface |
-    | Compatible with PSoC                      | Needs special PCB layout.                                        |
-    | Meets surface mount constraint of project |
+**Rationale:** <3–5 sentences tying to specs: voltage range, accuracy, availability/lead time, solderability, size, current draw, risk, schedule, cost.>
 
-1. CTX936TR-ND surface mount oscillator
+**Design Notes (if applicable):**
 
-    ![](image3.png)
+- Key spec(s): <e.g., resistance range, bend angle, ADC span, resolution, dropout, efficiency>
+- Interface: <e.g., 0–5 V analog into RA0, logic-level DOs to driver, etc.>
+- Risks & mitigations: <e.g., noise → RC filter; thermal → heatsink>
 
-    * $1/each
-    * [Link to product](http://www.digikey.com/product-detail/en/636L3I001M84320/CTX936TR-ND/2292940)
+---
 
-    | Pros                                                              | Cons                |
-    | ----------------------------------------------------------------- | ------------------- |
-    | Outputs a square wave                                             | More expensive      |
-    | Stable over operating temperature                                 | Slow shipping speed |
-    | Direct interface with PSoC (no external circuitry required) range |
+## Block: Flex Sensor _(example headings to guide you)_
 
-**Choice:** Option 2: CTX936TR-ND surface mount oscillator
+<!-- Replace content by duplicating the template above -->
+<!-- Keep your chosen model consistent across pages -->
 
-**Rationale:** A clock oscillator is easier to work with because it requires no external circuitry in order to interface with the PSoC. This is particularly important because we are not sure of the electrical characteristics of the PCB, which could affect the oscillation of a crystal. While the shipping speed is slow, according to the website if we order this week it will arrive within 3 weeks.
+## Block: Signal-Conditioning / Voltage Divider
+
+<!-- Include Rin value targets and expected sensor resistance range -->
+<!-- Option 1: Simple divider; Option 2: Divider + RC; Option 3: Op-amp buffer -->
+
+## Block: 5 V Regulator
+
+<!-- Option 1: 7805 linear; Option 2: LDO; Option 3: Buck -->
+
+**Thermal Check:** \( P*\text{diss} = (V*\text{in}-5)\times I\_\text{total} = (9-5)\times \_ = \_ \) W → <OK/Needs heatsink>.
+
+## Block: External Power Source (feeds the 5 V rail)
+
+<!-- e.g., 9 V wall adapter vs AA pack + buck vs Li-ion + buck (no USB power packs) -->
+
+## Block: Connectors (sensor + control header)
+
+<!-- Pitch, locking, current rating, availability, assembly effort -->
+
+---
+
+## Microcontroller (short comparison required by checklist)
+
+| Solution                                   | Photo                    |  Cost | Link                                | Pros                                               | Cons                                           |
+| ------------------------------------------ | ------------------------ | ----: | ----------------------------------- | -------------------------------------------------- | ---------------------------------------------- |
+| **PIC18F57Q43 Curiosity Nano (Dev Board)** | ![](path/to/picnano.png) | $X.XX | [Product page](https://example.com) | • Fast bring-up • On-board debugger • Known pinout | • Larger footprint • Dev-board BOM cost        |
+| **Bare PIC18F57Q43 (custom PCB)**          | ![](path/to/barepic.png) | $X.XX | [Product page](https://example.com) | • Lowest per-unit cost • Small footprint           | • Longer bring-up • Needs programming/debug HW |
+| **Alternate MCU Dev Board (<part>)**       | ![](path/to/altmcu.png)  | $X.XX | [Product page](https://example.com) | • Feature X • Ecosystem Y                          | • Porting effort • Different toolchain         |
+
+**Choice:** <…>  
+**Rationale:** <Why this MCU path best fits schedule, tools, drivers, and pin needs (RA0/RA2 ADCs; RA1/RB2/RC4 DOs).>
+
+---
+
+## Appendix (recommended)
+
+- **Block Diagram Image:** ![](path/to/your_block_diagram.png)
+- **Key Specifications:** <brief bullets you referenced>
+- **Assumptions:** <e.g., worst-case currents used, bend-angle range, environment>
