@@ -1112,7 +1112,8 @@ Outputs digital lines <strong>RA1, RB2, RC4</strong> to the Motor subsystem via 
 </tr>
 </tbody>
 </table>
-<p><strong>Choice:</strong> <strong>MC7805ACTG</strong><a href="../../image/mc7805actg.png">MC7805ACTG</a> for the current subsystem load;
+<p><strong>Choice:</strong> <strong>MC7805ACTG</strong>
+<a href="../../image/mc7805actg.png">MC7805ACTG</a> for the current subsystem load;
 I would switch to <strong>LM2596</strong> if total current rises.</p>
 <p><strong>Rationale:</strong> For Nano + sensor (&lt;~150 mA worst-case), a 7805 is the quietest, lowest-risk choice. If future peripherals raise current or thermal budget, the buck module avoids dissipation.</p>
 <p><strong>Thermal note:</strong> <span class="arithmatex">\( P*{\text{diss}} = (9\ \text{V} - 5\ \text{V}) \times I*{\text{total}} \)</span>.<br>
@@ -1157,7 +1158,8 @@ I would switch to <strong>LM2596</strong> if total current rises.</p>
 </tr>
 </tbody>
 </table>
-<p><strong>Choice:</strong> <strong>9 V wall adapter</strong><a href="../../image/adapter-9v.png">9V adapter</a>
+<p><strong>Choice:</strong> <strong>9 V wall adapter</strong>
+<a href="../../image/adapter-9v.png">9V adapter</a>
 for bench bring-up; consider <strong>2×18650 + buck</strong> for mobile demos later.</p>
 <p><strong>Rationale:</strong> The adapter minimizes risk and simplifies testing; battery paths add charging/cutoff complexity not needed for MVP.</p>
 <hr>
@@ -1200,7 +1202,8 @@ for bench bring-up; consider <strong>2×18650 + buck</strong> for mobile demos l
 </tr>
 </tbody>
 </table>
-<p><strong>Choice:</strong> <strong>JST-XH</strong><a href="../../image/jst-xh.png">JST-XH</a>
+<p><strong>Choice:</strong> <strong>JST-XH</strong>
+<a href="../../image/jst-xh.png">JST-XH</a>
 on the PCB for field connections; <strong>0.1″ headers</strong> for bench adapters.</p>
 <p><strong>Rationale:</strong> XH gives retention and current capacity on-device; 0.1″ is convenient during prototyping.</p>
 <hr>
@@ -1243,7 +1246,8 @@ on the PCB for field connections; <strong>0.1″ headers</strong> for bench adap
 </tr>
 </tbody>
 </table>
-<p><strong>Choice:</strong> <strong>PIC18F57Q43 Curiosity Nano</strong> <a href="../../image/pic18f57q43-nano.webp">Curiosity Nano</a>
+<p><strong>Choice:</strong> <strong>PIC18F57Q43 Curiosity Nano</strong>
+<a href="../../image/pic18f57q43-nano.webp">Curiosity Nano</a>
 <strong>Rationale:</strong> Lowest risk and fastest path for this course: on-board debugger, USB power, and immediate access to RA0/RA2 (ADC) + RA1/RB2/RC4 (digital outs). Provided in class</p>
 <hr>
 
