@@ -67,7 +67,8 @@ title: Component Selection (Individual — Flex Sensor Subsystem)
 | **Option 2:** TI LM2940-5.0 (TO-220, ~1 A)            | ![LM2940-5.0](../image/lm2940-5v.png)        | ~$2–$3 | [TI LM2940 product page](https://www.ti.com/product/LM2940)                                                              | • Lower dropout than 7805 • Good line/load behavior    | • Still linear (heat) • ~1 A limit        |
 | **Option 3:** LM2596 buck module (5 V, up to ~3 A)    | ![LM2596 module](../image/lm2596-module.png) | ~$3–$6 | [LM2596 module (Addicore)](https://www.addicore.com/products/lm2596-step-down-adjustable-dc-dc-switching-buck-converter) | • High efficiency • Low heat • Higher current headroom | • Module height; EMI care/layout practice |
 
-**Choice:** **MC7805ACTG**[MC7805ACTG](../image/mc7805actg.png) for the current subsystem load;
+**Choice:** **MC7805ACTG**
+[MC7805ACTG](../image/mc7805actg.png) for the current subsystem load;
 I would switch to **LM2596** if total current rises.
 
 **Rationale:** For Nano + sensor (<~150 mA worst-case), a 7805 is the quietest, lowest-risk choice. If future peripherals raise current or thermal budget, the buck module avoids dissipation.
@@ -85,7 +86,8 @@ _Example:_ at 120 mA → \(0.48\ \text{W}\) (fine on TO-220 with airflow). Add a
 | **Option 2: 6×AA holder (9 V alkaline / ~7.2 V NiMH)**     | ![6xAA holder](../image/6xaa-holder.png)       |           ~$1–$3 | [DFRobot 6×AA holder](https://www.dfrobot.com/product-201.html)                                            | • Cheap, simple • Field-portable                          | • Requires cells/charger • V droop under load |
 | **Option 3: 2×18650 holder (7.4 V nominal) + buck to 5 V** | ![2x18650 holder](../image/2x18650-holder.png) | ~$2–$5 (+ cells) | [Parts-Express 2×18650 holder](https://www.parts-express.com/18650-Dual-Battery-Holder-with-Leads-140-781) | • High energy density • Reusable cells                    | • Li-ion safety/charging management           |
 
-**Choice:** **9 V wall adapter**[9V adapter](../image/adapter-9v.png)
+**Choice:** **9 V wall adapter**
+[9V adapter](../image/adapter-9v.png)
 for bench bring-up; consider **2×18650 + buck** for mobile demos later.
 
 **Rationale:** The adapter minimizes risk and simplifies testing; battery paths add charging/cutoff complexity not needed for MVP.
@@ -100,7 +102,8 @@ for bench bring-up; consider **2×18650 + buck** for mobile demos later.
 | **Option 2:** Molex/JST-XH assortment kit           | ![JST-XH kit](../image/jst-xh.png)                     |  $20–$30 | [Adafruit JST-XH kit (PDF)](https://www.mouser.com/datasheet/2/737/Adafruit_4423_Web-3357984.pdf) | • Handy assortment for lab builds                    | • Bulk purchase; storage overhead |
 | **Option 3:** 0.1″ (2.54 mm) pin headers + housings | ![0.1-inch pin headers](../image/pin-headers-2p54.png) | Very low | [Adafruit 0.1″ break-away header](https://www.adafruit.com/product/400)                           | • Breadboard-compatible • Lowest cost                | • No latch; can pull loose        |
 
-**Choice:** **JST-XH**[JST-XH](../image/jst-xh.png)
+**Choice:** **JST-XH**
+[JST-XH](../image/jst-xh.png)
 on the PCB for field connections; **0.1″ headers** for bench adapters.
 
 **Rationale:** XH gives retention and current capacity on-device; 0.1″ is convenient during prototyping.
@@ -115,7 +118,8 @@ on the PCB for field connections; **0.1″ headers** for bench adapters.
 | **Bare PIC18F57Q43 on custom PCB**                | ![PIC18F57Q43 generic](../image/pic18f57q43-nano.webp) |   ~$3–$6 | [PIC18F57Q43 product](https://www.microchip.com/en-us/product/PIC18F57Q43)             | • Lowest per-unit cost • Small footprint           | • Needs programming/debug HW • Longer bring-up |
 | **Alt MCU Dev Board (ATmega4809 Curiosity Nano)** | ![Alt Nano](../image/alt-mcu-nano.avif)                | ~$25–$30 | [ATmega4809 Curiosity Nano](https://www.microchip.com/en-us/development-tool/EV35L43A) | • Similar toolchain • Many examples                | • Porting effort • Different peripherals       |
 
-**Choice:** **PIC18F57Q43 Curiosity Nano** [Curiosity Nano](../image/pic18f57q43-nano.webp)
+**Choice:** **PIC18F57Q43 Curiosity Nano**
+[Curiosity Nano](../image/pic18f57q43-nano.webp)
 **Rationale:** Lowest risk and fastest path for this course: on-board debugger, USB power, and immediate access to RA0/RA2 (ADC) + RA1/RB2/RC4 (digital outs). Provided in class
 
 ---
