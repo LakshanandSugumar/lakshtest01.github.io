@@ -584,9 +584,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#block-external-power-source-feeds-5-v-rail" class="md-nav__link">
+  <a href="#block-external-power-source-feeds-the-5-v-rail" class="md-nav__link">
     <span class="md-ellipsis">
-      Block: External Power Source (feeds 5 V rail)
+      Block: External Power Source (feeds the 5 V rail)
     </span>
   </a>
   
@@ -945,9 +945,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#block-external-power-source-feeds-5-v-rail" class="md-nav__link">
+  <a href="#block-external-power-source-feeds-the-5-v-rail" class="md-nav__link">
     <span class="md-ellipsis">
-      Block: External Power Source (feeds 5 V rail)
+      Block: External Power Source (feeds the 5 V rail)
     </span>
   </a>
   
@@ -1112,32 +1112,32 @@
 <tbody>
 <tr>
 <td><strong>Option 1: Spectra Symbol FS-L-095-103-RH (95 mm, 10 kΩ)</strong></td>
-<td><a href="https://www.digikey.com/en/products/detail/spectra-symbol/FS-L-095-103-RH/17051203"><img alt="FS-L-095-103-RH" src="https://media.digikey.com/Photos/Spectra%20Symbol%20Photos/FS-L-095-103-RH.jpg" width="120"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="./fs-l-095-103-rh.png" data-desc-position="bottom"><img src="./fs-l-095-103-rh.png" alt="FS-L-095-103-RH" width="120"></a></td>
 <td style="text-align: right;">~<span class="arithmatex">\(16–\)</span>20</td>
 <td><a href="https://www.digikey.com/en/products/detail/spectra-symbol/FS-L-095-103-RH/17051203">Digi-Key product page</a></td>
-<td>• Stock 10 kΩ; common in labs • Clear datasheet and ordering guide • Solder-tab/“RH” termination available</td>
-<td>• ±30% R tol. • Needs strain relief on tail</td>
+<td>• Stock 10 kΩ; common in labs • Clear datasheet &amp; ordering guide • “RH” solder tab option</td>
+<td>• ±30% R tolerance • Needs tail strain relief</td>
 </tr>
 <tr>
 <td><strong>Option 2: Spectra Symbol FS-L-060-103 (60 mm)</strong></td>
-<td><a href="https://www.mouser.com/ProductDetail/Spectra-Symbol/FS-L-060-103?qs=WyAARYrb3f7k3ykdRz2Qbw%3D%3D"><img alt="FS-L-060-103" src="https://cdn.mouser.com/images/spectrasymbol/images/FlexSensor.jpg" width="120"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="./fs-l-055-253-mp.png" data-desc-position="bottom"><img src="./fs-l-055-253-mp.png" alt="Spectra Symbol flex sensor (short)" width="120"></a></td>
 <td style="text-align: right;">~<span class="arithmatex">\(15–\)</span>18</td>
 <td><a href="https://www.mouser.com/ProductDetail/Spectra-Symbol/FS-L-060-103">Mouser product page</a></td>
-<td>• Shorter active length (tighter spaces) • Same 10 kΩ nominal • Similar calibration behavior</td>
-<td>• Lower absolute voltage swing for same bend</td>
+<td>• Shorter length for tight spaces • Same 10 kΩ nominal • Similar calibration behavior</td>
+<td>• Smaller absolute ADC swing for same bend</td>
 </tr>
 <tr>
-<td><strong>Option 3: Flexpoint Bend Sensor (similar 10 kΩ class)</strong></td>
-<td><a href="https://www.mouser.com/c/sensors/position-sensors/flex-bend-sensors/"><img alt="Flexpoint example" src="https://cdn.mouser.com/images/mouserimages/hero/sensors-position-sensors-flex-bend-sensors.jpg" width="120"></a></td>
+<td><strong>Option 3: Flexpoint Bend Sensor (10 kΩ class)</strong></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="./flexpoint-bend.png" data-desc-position="bottom"><img src="./flexpoint-bend.png" alt="Flexpoint bend sensor" width="120"></a></td>
 <td style="text-align: right;">~<span class="arithmatex">\(10–\)</span>20</td>
 <td><a href="https://www.mouser.com/c/sensors/position-sensors/flex-bend-sensors/">Mouser bend sensors</a></td>
-<td>• Alternative vendor/lead times • Various lengths/forms</td>
-<td>• Different mechanical stackup; may need retest</td>
+<td>• Alternative vendor/lead times • Multiple formats/lengths</td>
+<td>• Different mechanical stack-up; re-characterization may be needed</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Choice:</strong> <strong>FS-L-095-103-RH</strong> (95 mm, 10 kΩ)<br>
-<strong>Rationale:</strong> Matches our mechanical reach and gives a large ADC span after a simple divider; readily available with datasheet/support; consistent with classroom stock and examples.</p>
+<strong>Rationale:</strong> Fits the mechanical reach and provides a large, clean ADC span with a simple divider. It’s well-documented and readily available in class-friendly quantities.</p>
 <hr>
 <h2 id="block-signal-conditioning-voltage-divider">Block: Signal-Conditioning / Voltage Divider</h2>
 <p><strong>Role:</strong> Convert the flex sensor’s resistance change to a 0–5 V signal for <strong>RA0/AN0</strong>; optionally filter/buffer.</p>
@@ -1154,36 +1154,36 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>Option 1: Simple divider (10 kΩ sensor vs. fixed Rin 10–22 kΩ)</strong></td>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Voltage_divider.svg/240px-Voltage_divider.svg.png" data-desc-position="bottom"><img alt="Divider" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Voltage_divider.svg/240px-Voltage_divider.svg.png" width="120"></a></td>
+<td><strong>Option 1: Simple divider (10 kΩ sensor vs fixed Rin 10–22 kΩ)</strong></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="./divider-simple.png" data-desc-position="bottom"><img src="./divider-simple.png" alt="Voltage divider" width="120"></a></td>
 <td style="text-align: right;">&lt;$0.10</td>
 <td>—</td>
-<td>• Easiest; minimal BOM • Works directly into ADC</td>
-<td>• Source impedance varies → ADC sampling error • No anti-alias/noise filtering</td>
+<td>• Minimal BOM • Works straight into ADC</td>
+<td>• Source impedance varies → sampling error • No anti-alias filtering</td>
 </tr>
 <tr>
 <td><strong>Option 2: Divider + RC low-pass (e.g., 1 kΩ + 0.1 µF)</strong></td>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/RC_Divider.svg/240px-RC_Divider.svg.png" data-desc-position="bottom"><img alt="RC filter" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/RC_Divider.svg/240px-RC_Divider.svg.png" width="120"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="./divider-rc.png" data-desc-position="bottom"><img src="./divider-rc.png" alt="Divider with RC" width="120"></a></td>
 <td style="text-align: right;">&lt;$0.20</td>
 <td>—</td>
-<td>• Noise reduction; stable reading • Limits aliasing</td>
+<td>• Noise reduction • Stabilizes readings • Limits aliasing</td>
 <td>• Adds latency; cutoff must be chosen</td>
 </tr>
 <tr>
-<td><strong>Option 3: Buffer with rail-to-rail op-amp (e.g., </strong>MCP6002<strong>)</strong></td>
-<td><a href="https://www.microchip.com/en-us/product/mcp6002"><img alt="MCP6002" src="https://www.microchip.com/en-us/product/mcp6002/_jcr_content/root/responsivegrid/carousel_copy_copy_copy_cop/item_1663534118.coreimg.png/1704767436954/mcp6002-6001-6004-pic.png" width="120"></a></td>
+<td><strong>Option 3: Buffer with rail-to-rail op-amp (MCP6002)</strong></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="./mcp6002.png" data-desc-position="bottom"><img src="./mcp6002.png" alt="MCP6002" width="120"></a></td>
 <td style="text-align: right;">~<span class="arithmatex">\(0.40–\)</span>0.80</td>
-<td><a href="https://www.microchip.com/en-us/product/mcp6002">Microchip MCP6002</a> • <a href="https://ww1.microchip.com/downloads/en/DeviceDoc/MCP6001-1R-1U-2-4-1-MHz-Low-Power-Op-Amp-DS20001733L.pdf">Datasheet PDF</a></td>
-<td>• High input Z; isolates ADC • Rail-to-rail on 5 V • Easy to add active filter/gain</td>
+<td><a href="https://www.microchip.com/en-us/product/mcp6002">MCP6002</a> · <a href="https://ww1.microchip.com/downloads/en/DeviceDoc/MCP6001-1R-1U-2-4-1-MHz-Low-Power-Op-Amp-DS20001733L.pdf">Datasheet</a></td>
+<td>• High input Z; isolates ADC • Rail-to-rail @ 5 V • Easy to add active filter/gain</td>
 <td>• Slightly higher BOM &amp; layout effort</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Choice:</strong> <strong>Option 2: Divider + RC</strong>, upgraded to <strong>Option 3</strong> if noise/ADC impedance errors appear.<br>
-<strong>Rationale:</strong> We’ll start simple with an RC that stabilizes readings; if needed, drop in an MCP6002 buffer (same footprint series) to guarantee low source impedance to the ADC and allow filtering.</p>
+<p><strong>Choice:</strong> <strong>Option 2: Divider + RC</strong>, with an upgrade path to <strong>Option 3</strong> if noise or ADC impedance issues are observed.<br>
+<strong>Rationale:</strong> RC filtering stabilizes the measurement with negligible cost/complexity; buffering remains a drop-in improvement if needed.</p>
 <hr>
 <h2 id="block-5-v-regulator-from-9-v-source">Block: 5 V Regulator (from 9 V source)</h2>
-<p><strong>Role:</strong> Provide regulated 5 V to the PIC Nano + sensor circuitry.</p>
+<p><strong>Role:</strong> Provide regulated 5 V to the Curiosity Nano + sensor chain.</p>
 <table>
 <thead>
 <tr>
@@ -1197,39 +1197,37 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>Option 1: onsemi </strong>MC7805ACTG<strong> (TO-220, 5 V/1.5 A)</strong></td>
-<td><a href="https://www.digikey.com/en/products/detail/onsemi/MC7805ACTG/919998"><img alt="MC7805ACTG" src="https://media.digikey.com/Photos/ON%20Semiconductor%20Photos/MC7805ACTG.jpg" width="120"></a></td>
+<td><strong>Option 1: onsemi MC7805ACTG (TO-220, 5 V / 1.5 A)</strong></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="./mc7805actg.png" data-desc-position="bottom"><img src="./mc7805actg.png" alt="MC7805ACTG" width="120"></a></td>
 <td style="text-align: right;">~$1</td>
 <td><a href="https://www.digikey.com/en/products/detail/onsemi/MC7805ACTG/919998">Digi-Key MC7805ACTG</a></td>
-<td>• Simple; robust; easy to heatsink • Low EMI</td>
-<td>• Heat dissipation from 9 V→5 V at higher I</td>
+<td>• Simple &amp; robust • Easy to heatsink • Low EMI</td>
+<td>• Linear → heat from 9→5 V at higher I</td>
 </tr>
 <tr>
-<td><strong>Option 2: Automotive LDO </strong>LM2940-5.0<strong> (TO-220, ~1 A)</strong></td>
-<td><a href="https://www.ti.com/product/LM2940"><img alt="LM2940" src="https://www.ti.com/diagrams/parts/LM2940.jpg" width="120"></a></td>
+<td><strong>Option 2: TI LM2940-5.0 (TO-220, ~1 A)</strong></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="./lm2940-5v.png" data-desc-position="bottom"><img src="./lm2940-5v.png" alt="LM2940-5.0" width="120"></a></td>
 <td style="text-align: right;">~<span class="arithmatex">\(2–\)</span>3</td>
 <td><a href="https://www.ti.com/product/LM2940">TI LM2940</a></td>
-<td>• Lower dropout than 7805 • Good line/load response</td>
-<td>• 1 A limit; still linear (heat)</td>
+<td>• Lower dropout than 7805 • Good line/load behavior</td>
+<td>• Still linear (heat) • ~1 A limit</td>
 </tr>
 <tr>
-<td><strong>Option 3: Buck module </strong>LM2596<strong> 5 V/3 A adjustable</strong></td>
-<td><a href="https://www.addicore.com/products/lm2596-step-down-adjustable-dc-dc-switching-buck-converter"><img alt="LM2596 Module" src="https://cdn.shopify.com/s/files/1/0828/5565/products/LM2596-Adjustable-Step-Down-Module-iso_1024x1024.jpg?v=1571439043" width="120"></a></td>
+<td><strong>Option 3: LM2596 buck module (5 V, up to ~3 A)</strong></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="./lm2596-module.png" data-desc-position="bottom"><img src="./lm2596-module.png" alt="LM2596 module" width="120"></a></td>
 <td style="text-align: right;">~<span class="arithmatex">\(3–\)</span>6</td>
-<td><a href="https://www.addicore.com/products/lm2596-step-down-adjustable-dc-dc-switching-buck-converter">Addicore LM2596 module</a></td>
-<td>• High efficiency; low heat • Up to ~3 A</td>
-<td>• Needs layout care for EMI; module height</td>
+<td><a href="https://www.addicore.com/products/lm2596-step-down-adjustable-dc-dc-switching-buck-converter">LM2596 module</a></td>
+<td>• High efficiency • Low heat • Higher current headroom</td>
+<td>• Module height; EMI care/layout practice</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Choice:</strong> <strong>MC7805ACTG</strong> (Option 1) <strong>if</strong> I_total is small; else <strong>LM2596 buck</strong>.<br>
-<strong>Rationale:</strong> For the Nano + sensor, current is modest, so a 7805 is simplest and quiet. If later loads increase (e.g., additional sensors), we’ll switch to the LM2596 module to avoid thermal issues.</p>
-<p><strong>Thermal note:</strong> <span class="arithmatex">\(P*{\text{diss}} = (9\text{ V} - 5\text{ V}) \times I*{\text{total}}\)</span>.</p>
-<ul>
-<li>Example: at 120 mA worst-case → <span class="arithmatex">\(0.48\text{ W}\)</span> (safe on TO-220 with airflow). Add a small clip-on heatsink if <span class="arithmatex">\(&gt;0.8\text{ W}\)</span>.</li>
-</ul>
+<p><strong>Choice:</strong> <strong>MC7805ACTG</strong> for the current subsystem load; switch to <strong>LM2596</strong> if total current rises.<br>
+<strong>Rationale:</strong> For Nano + sensor (&lt;~150 mA worst-case), a 7805 is the quietest, lowest-risk choice. If future peripherals raise current or thermal budget, the buck module avoids dissipation.</p>
+<p><strong>Thermal note:</strong> <span class="arithmatex">\( P*{\text{diss}} = (9\ \text{V} - 5\ \text{V}) \times I*{\text{total}} \)</span>.<br>
+<em>Example:</em> at 120 mA → <span class="arithmatex">\(0.48\ \text{W}\)</span> (fine on TO-220 with airflow). Add a small heatsink if <span class="arithmatex">\(&gt;0.8\ \text{W}\)</span>.</p>
 <hr>
-<h2 id="block-external-power-source-feeds-5-v-rail">Block: External Power Source (feeds 5 V rail)</h2>
+<h2 id="block-external-power-source-feeds-the-5-v-rail">Block: External Power Source (feeds the 5 V rail)</h2>
 <table>
 <thead>
 <tr>
@@ -1244,32 +1242,32 @@
 <tbody>
 <tr>
 <td><strong>Option 1: 9 V wall adapter, 2.1 mm barrel (center +)</strong></td>
-<td><a href="https://resources.ampheo.com/static/datasheets/cui-inc/dpd090050-p5p-tk.pdf"><img alt="CUI 9V adapter" src="https://m.media-amazon.com/images/I/51m+u2A7nWL._AC_SL1500_.jpg" width="120"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="./adapter-9v.png" data-desc-position="bottom"><img src="./adapter-9v.png" alt="9V adapter" width="120"></a></td>
 <td style="text-align: right;">~<span class="arithmatex">\(8–\)</span>12</td>
-<td><a href="https://resources.ampheo.com/static/datasheets/cui-inc/dpd090050-p5p-tk.pdf">CUI DPD0900xx series datasheet</a></td>
-<td>• Clean supply, plug-and-play • No charging safety issues</td>
+<td><a href="https://resources.ampheo.com/static/datasheets/cui-inc/dpd090050-p5p-tk.pdf">CUI DPD series datasheet</a></td>
+<td>• Clean, regulated • Plug-and-play • No charging concerns</td>
 <td>• Tethered to mains</td>
 </tr>
 <tr>
 <td><strong>Option 2: 6×AA holder (9 V alkaline / ~7.2 V NiMH)</strong></td>
-<td><a href="https://www.dfrobot.com/product-201.html"><img alt="6xAA holder" src="https://dfimg.dfrobot.com/store/data/FIT0078/7a8f9b46c8473a0af8f2a51b3b0a6307.jpg" width="120"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="./6xaa-holder.png" data-desc-position="bottom"><img src="./6xaa-holder.png" alt="6xAA holder" width="120"></a></td>
 <td style="text-align: right;">~<span class="arithmatex">\(1–\)</span>3</td>
 <td><a href="https://www.dfrobot.com/product-201.html">DFRobot 6×AA holder</a></td>
-<td>• Cheap, easy to source • Field-portable</td>
-<td>• Disposable cells or charger needed</td>
+<td>• Cheap, simple • Field-portable</td>
+<td>• Requires cells/charger • V droop under load</td>
 </tr>
 <tr>
 <td><strong>Option 3: 2×18650 holder (7.4 V nominal) + buck to 5 V</strong></td>
-<td><a href="https://www.parts-express.com/18650-Dual-Battery-Holder-with-Leads-140-781"><img alt="18650 holder" src="https://www.parts-express.com/data/default/images/catalog/140/140-781_HR_0.jpg" width="120"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="./2x18650-holder.png" data-desc-position="bottom"><img src="./2x18650-holder.png" alt="2x18650 holder" width="120"></a></td>
 <td style="text-align: right;">~<span class="arithmatex">\(2–\)</span>5 (+ cells)</td>
 <td><a href="https://www.parts-express.com/18650-Dual-Battery-Holder-with-Leads-140-781">2×18650 holder</a></td>
 <td>• High energy density • Reusable cells</td>
-<td>• Must manage Li-ion safety/charging</td>
+<td>• Li-ion safety/charging management</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Choice:</strong> <strong>Option 1: 9 V wall adapter</strong> for lab bring-up; <strong>Option 3</strong> later if portable.<br>
-<strong>Rationale:</strong> Wall adapter is safest/cleanest for bench testing; battery paths introduce charging and cutoff concerns we don’t need in the MVP.</p>
+<p><strong>Choice:</strong> <strong>9 V wall adapter</strong> for bench bring-up; consider <strong>2×18650 + buck</strong> for mobile demos later.<br>
+<strong>Rationale:</strong> The adapter minimizes risk and simplifies testing; battery paths add charging/cutoff complexity not needed for MVP.</p>
 <hr>
 <h2 id="block-connectors-sensor-input-subsystem-headers">Block: Connectors (sensor input + subsystem headers)</h2>
 <table>
@@ -1286,32 +1284,32 @@
 <tbody>
 <tr>
 <td><strong>Option 1: JST-XH (2.5 mm pitch) wire-to-board</strong></td>
-<td><a href="https://www.digikey.com/en/resources/datasheets/jst/xh-connector"><img alt="JST-XH" src="https://media.digikey.com/Photos/JST%20Photos/XH_Series.jpg" width="120"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="./jst-xh.png" data-desc-position="bottom"><img src="./jst-xh.png" alt="JST-XH" width="120"></a></td>
 <td style="text-align: right;">Low</td>
 <td><a href="https://www.jst-mfg.com/product/pdf/eng/eXH.pdf">JST XH datasheet</a></td>
-<td>• Locking friction • ~3 A rating (AWG22) • Widely available</td>
-<td>• 2.5 mm pitch (not breadboard-friendly)</td>
+<td>• Locking friction • ~3 A (AWG22) • Widely available</td>
+<td>• Not breadboard-friendly</td>
 </tr>
 <tr>
-<td><strong>Option 2: Molex KK / JST-XH compatible headers</strong></td>
-<td><a href="https://www.mouser.com/datasheet/2/737/Adafruit_4423_Web-3357984.pdf"><img alt="JST-XH kit" src="https://cdn-shop.adafruit.com/970x728/4423-02.jpg" width="120"></a></td>
-<td style="text-align: right;">Kit <span class="arithmatex">\(20–\)</span>30</td>
-<td><a href="https://www.mouser.com/datasheet/2/737/Adafruit_4423_Web-3357984.pdf">JST-XH kit (Adafruit)</a></td>
-<td>• Complete assortment for lab use</td>
-<td>• Bulk purchase; storage</td>
+<td><strong>Option 2: Molex/JST-XH assortment kit</strong></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="./jst-xh.png" data-desc-position="bottom"><img src="./jst-xh.png" alt="JST-XH kit" width="120"></a></td>
+<td style="text-align: right;"><span class="arithmatex">\(20–\)</span>30</td>
+<td><a href="https://www.mouser.com/datasheet/2/737/Adafruit_4423_Web-3357984.pdf">Adafruit kit PDF</a></td>
+<td>• Handy assortment for lab builds</td>
+<td>• Bulk purchase; storage overhead</td>
 </tr>
 <tr>
-<td><strong>Option 3: 0.1'' (2.54 mm) pin headers + housings</strong></td>
-<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Pin_header_2x05.jpg/240px-Pin_header_2x05.jpg" data-desc-position="bottom"><img alt="0.1 headers" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Pin_header_2x05.jpg/240px-Pin_header_2x05.jpg" width="120"></a></td>
+<td><strong>Option 3: 0.1″ (2.54 mm) pin headers + housings</strong></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="./pin-headers-2p54.png" data-desc-position="bottom"><img src="./pin-headers-2p54.png" alt="0.1-inch pin headers" width="120"></a></td>
 <td style="text-align: right;">Very low</td>
 <td>—</td>
-<td>• Breadboard-compatible • Cheapest</td>
-<td>• No latch; easier to pull loose</td>
+<td>• Breadboard-compatible • Lowest cost</td>
+<td>• No latch; can pull loose</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Choice:</strong> <strong>JST-XH</strong> on the PCB for field connections; <strong>0.1" pins</strong> for lab/breadboard adapters.<br>
-<strong>Rationale:</strong> XH gives current capacity and retention; pin headers are convenient during prototyping.</p>
+<p><strong>Choice:</strong> <strong>JST-XH</strong> on the PCB for field connections; <strong>0.1″ headers</strong> for bench adapters.<br>
+<strong>Rationale:</strong> XH gives retention and current capacity on-device; 0.1″ is convenient during prototyping.</p>
 <hr>
 <h2 id="microcontroller-short-comparison-required-by-checklist">Microcontroller (short comparison — required by checklist)</h2>
 <table>
@@ -1328,32 +1326,32 @@
 <tbody>
 <tr>
 <td><strong>PIC18F57Q43 Curiosity Nano (Dev Board)</strong></td>
-<td><a href="https://www.microchip.com/en-us/development-tool/DM164150"><img alt="Curiosity Nano" src="https://www.microchip.com/content/dam/mchp/mrt-dam/devtools/low-pincount-8-bit-nano_600x600.jpg" width="120"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="./pic18f57q43-nano.png" data-desc-position="bottom"><img src="./pic18f57q43-nano.png" alt="Curiosity Nano" width="120"></a></td>
 <td style="text-align: right;">~<span class="arithmatex">\(25–\)</span>35</td>
 <td><a href="https://www.microchip.com/en-us/development-tool/DM164150">Microchip DM164150</a></td>
 <td>• On-board debugger • Fast bring-up • Known pinout</td>
-<td>• Larger footprint • Dev board BOM cost</td>
+<td>• Larger footprint • Dev-board BOM cost</td>
 </tr>
 <tr>
 <td><strong>Bare PIC18F57Q43 on custom PCB</strong></td>
-<td><a href="https://www.microchip.com/en-us/product/PIC18F57Q43"><img alt="PIC18F57Q43" src="https://www.microchip.com/_next/image?url=https%3A%2F%2Fmedia.microchip.com%2Fis%2Fimage%2Fmicrochiptechnologyinc%2FMicrochip%20PIC18F57Q43%3Ffmt%3Dpng-alpha&amp;w=384&amp;q=75" width="120"></a></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="./pic18f57q43-nano.png" data-desc-position="bottom"><img src="./pic18f57q43-nano.png" alt="PIC18F57Q43 generic" width="120"></a></td>
 <td style="text-align: right;">~<span class="arithmatex">\(3–\)</span>6</td>
-<td><a href="https://www.microchip.com/en-us/product/PIC18F57Q43">Product page</a></td>
-<td>• Lowest unit cost • Small footprint</td>
+<td><a href="https://www.microchip.com/en-us/product/PIC18F57Q43">PIC18F57Q43</a></td>
+<td>• Lowest per-unit cost • Small footprint</td>
 <td>• Needs programming/debug HW • Longer bring-up</td>
 </tr>
 <tr>
-<td><strong>Alt MCU Dev Board (e.g., ATmega4809 Curiosity Nano)</strong></td>
-<td><a href="https://www.microchip.com/en-us/development-tool/EV35L43A"><img alt="Alt Nano" src="https://www.microchip.com/content/dam/mchp/mrt-dam/devtools/nano-boards_600x600.jpg" width="120"></a></td>
+<td><strong>Alt MCU Dev Board (ATmega4809 Curiosity Nano)</strong></td>
+<td><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="./alt-mcu-nano.png" data-desc-position="bottom"><img src="./alt-mcu-nano.png" alt="Alt Nano" width="120"></a></td>
 <td style="text-align: right;">~<span class="arithmatex">\(25–\)</span>30</td>
 <td><a href="https://www.microchip.com/en-us/development-tool/EV35L43A">Example alt board</a></td>
-<td>• Similar toolchain • Abundant examples</td>
+<td>• Similar toolchain • Many examples</td>
 <td>• Porting effort • Different peripherals</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Choice:</strong> <strong>PIC18F57Q43 Curiosity Nano</strong><br>
-<strong>Rationale:</strong> Zero-friction bring-up (on-board debugger, USB power) and pin access to RA0/RA2 ADC + RA1/RB2/RC4 outputs make it the lowest-risk path for this class project.</p>
+<strong>Rationale:</strong> Lowest risk and fastest path for this course: on-board debugger, USB power, and immediate access to RA0/RA2 (ADC) + RA1/RB2/RC4 (digital outs).</p>
 <hr>
 <h1 id="power-budget-stub-for-next-page">Power Budget (stub for next page)</h1>
 <blockquote>
@@ -1419,7 +1417,7 @@
 </table>
 <h3 id="section-c-regulator-choice-per-rail">Section C — Regulator choice per rail</h3>
 <ul>
-<li><strong>5 V:</strong> <strong>MC7805ACTG</strong> (or LM2596 buck if thermal &gt; ~0.8 W)<br>
+<li><strong>5 V:</strong> <strong>MC7805ACTG</strong> (or <strong>LM2596 buck</strong> if thermal &gt; ~0.8 W).<br>
 <em>Enter the final choice into your spreadsheet cell “Regulator or Source Choice.”</em></li>
 </ul>
 <h3 id="section-d-external-power-source">Section D — External power source</h3>
@@ -1430,7 +1428,7 @@
 <p>[
 \text{Life (h)} \approx \frac{\text{Capacity (mAh)}}{\text{Total current (mA)}} \times \text{derating}
 ]
-Use derating 0.7–0.8 for real-world.</p>
+Use derating 0.7–0.8 for real-world conditions.</p>
 
 
 
