@@ -1,53 +1,44 @@
 ---
-title: Lakshanand’s Individual Subsystem – Schematic
+title: Schematic (Individual — Flex Sensor Subsystem)
 ---
 
-# 🧠 Overview
-
-This schematic represents the **individual subsystem** designed by **Lakshanand Sugumar** for _EGR 304: Embedded Systems Design_.  
-It integrates a **PIC18F57Q43 Curiosity Nano** with a **5 V linear voltage regulator**, sensor circuit, and header connections for interfacing with the main system.
-
-Key design features:
-
-- Stable 5 V regulation from a 9–12 V barrel-jack input
-- Inline fuse for current protection
-- Amplified analog sensor with op-amp conditioning
-- Proper bypass capacitors on all power pins
-- UART headers for serial communication
-- Debug LED and button for diagnostics
+> **Scope (Laksh / Flex Sensor Subsystem):**
+> This schematic represents the individual subsystem containing the Curiosity Nano microcontroller, 5 V linear regulator, Flex Sensor voltage divider, and necessary connectors for power and communication.
 
 ---
 
-## ⚙️ Schematic
+## 🧩 Schematic
 
-<p align="center">
-  <img src="Capture.png" alt="Schematic" width="850"/>
-</p>
+**Overview:**  
+The schematic shows all connections for the PIC18F57Q43 Curiosity Nano, power regulation, sensor input, and interface headers.  
+Bypass capacitors (0.1 µF) are placed near each VDD pin. The regulator receives 9–12 V from an external adapter and provides a clean 5 V rail to the board.
 
-📦 **[Download Project ZIP – Individual_Subsystem.zip](Individual_Subsystem.zip)**
+![Full Schematic](Capture.png)
+
+📦 **[Download Full Project ZIP — Individual_Subsystem.zip](Individual_Subsystem.zip)**
 
 ---
 
 ## 🪛 PCB Layout & Layers
 
-### Top Copper Layer
+**Description:**  
+The PCB layout includes a two-layer design (top and bottom copper), with clear routing for power and sensor signals. Mounting holes and connector pads are positioned for easy assembly.
 
-<p align="center"><img src="schem5.png" width="850"/></p>
+**Layer Previews (from Cadence PCB Editor):**
 
-### Soldermask Views
+|           View           |              Image               |
+| :----------------------: | :------------------------------: |
+| **Top Copper / Outline** |    ![Top Copper](schem5.png)     |
+|    **Top Soldermask**    |  ![Top Soldermask](schem3.png)   |
+|  **Bottom Soldermask**   | ![Bottom Soldermask](schem4.png) |
+|    **Bottom Copper**     |   ![Bottom Copper](schem1.png)   |
+| **Full Board Overview**  |  ![Board Overview](schem2.png)   |
 
-<p align="center">
-  <img src="schem3.png" width="420"/>
-  <img src="schem4.png" width="420"/>
-  <img src="schem1.png" width="420"/>
-  <img src="schem2.png" width="420"/>
-</p>
-
-📦 **[Download Project ZIP – Individual_Subsystem.zip](Individual_Subsystem.zip)**
+📦 **[Download PCB + Schematic Files (ZIP)](Individual_Subsystem.zip)**
 
 ## ✍ Author
 
 **Lakshanand Sugumar**  
 B.S.E. Robotics Engineering, Arizona State University  
-_Embedded Systems Design – Individual Subsystem_  
-📅 Submitted: October 20, 2025
+_EGR 304 — Individual Subsystem (Flex Sensor)_  
+📅 Submitted October 20, 2025
