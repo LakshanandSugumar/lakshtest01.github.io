@@ -26,7 +26,7 @@
 
     
       
-        <title>Lakshanand’s Individual Subsystem – Schematic - EGR 304 (name) Data Sheet</title>
+        <title>Schematic (Individual — Flex Sensor Subsystem) - EGR 304 (name) Data Sheet</title>
       
     
     
@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overview" class="md-skip">
+        <a href="#schematic" class="md-skip">
           Skip to content
         </a>
       
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Lakshanand’s Individual Subsystem – Schematic
+              Schematic (Individual — Flex Sensor Subsystem)
             
           </span>
         </div>
@@ -604,14 +604,12 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   <span class="md-ellipsis">
-    Lakshanand’s Individual Subsystem – Schematic
+    Schematic (Individual — Flex Sensor Subsystem)
   </span>
   
 
@@ -622,7 +620,7 @@
         
   
   <span class="md-ellipsis">
-    Lakshanand’s Individual Subsystem – Schematic
+    Schematic (Individual — Flex Sensor Subsystem)
   </span>
   
 
@@ -634,8 +632,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -646,7 +642,7 @@
         <li class="md-nav__item">
   <a href="#schematic" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚙️ Schematic
+      🧩 Schematic
     </span>
   </a>
   
@@ -658,30 +654,6 @@
       🪛 PCB Layout &amp; Layers
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="🪛 PCB Layout &amp; Layers">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#top-copper-layer" class="md-nav__link">
-    <span class="md-ellipsis">
-      Top Copper Layer
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#soldermask-views" class="md-nav__link">
-    <span class="md-ellipsis">
-      Soldermask Views
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -833,8 +805,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -845,7 +815,7 @@
         <li class="md-nav__item">
   <a href="#schematic" class="md-nav__link">
     <span class="md-ellipsis">
-      ⚙️ Schematic
+      🧩 Schematic
     </span>
   </a>
   
@@ -857,30 +827,6 @@
       🪛 PCB Layout &amp; Layers
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="🪛 PCB Layout &amp; Layers">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#top-copper-layer" class="md-nav__link">
-    <span class="md-ellipsis">
-      Top Copper Layer
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#soldermask-views" class="md-nav__link">
-    <span class="md-ellipsis">
-      Soldermask Views
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -916,44 +862,60 @@
   
 
 
-<h1 id="overview">🧠 Overview</h1>
-<p>This schematic represents the <strong>individual subsystem</strong> designed by <strong>Lakshanand Sugumar</strong> for <em>EGR 304: Embedded Systems Design</em>.<br>
-It integrates a <strong>PIC18F57Q43 Curiosity Nano</strong> with a <strong>5 V linear voltage regulator</strong>, sensor circuit, and header connections for interfacing with the main system.</p>
-<p>Key design features:</p>
-<ul>
-<li>Stable 5 V regulation from a 9–12 V barrel-jack input</li>
-<li>Inline fuse for current protection</li>
-<li>Amplified analog sensor with op-amp conditioning</li>
-<li>Proper bypass capacitors on all power pins</li>
-<li>UART headers for serial communication</li>
-<li>Debug LED and button for diagnostics</li>
-</ul>
-<hr>
-<h2 id="schematic">⚙️ Schematic</h2>
-<p align="center">
-  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="Capture.png" data-desc-position="bottom"><img src="Capture.png" alt="Schematic" width="850"></a>
-</p>
+  <h1>Schematic (Individual — Flex Sensor Subsystem)</h1>
 
-<p>📦 <strong><a href="../Individual_Subsystem.zip">Download Project ZIP – Individual_Subsystem.zip</a></strong></p>
+<blockquote>
+<p><strong>Scope (Laksh / Flex Sensor Subsystem):</strong>
+This schematic represents the individual subsystem containing the Curiosity Nano microcontroller, 5 V linear regulator, Flex Sensor voltage divider, and necessary connectors for power and communication.</p>
+</blockquote>
+<hr>
+<h2 id="schematic">🧩 Schematic</h2>
+<p><strong>Overview:</strong><br>
+The schematic shows all connections for the PIC18F57Q43 Curiosity Nano, power regulation, sensor input, and interface headers.<br>
+Bypass capacitors (0.1 µF) are placed near each VDD pin. The regulator receives 9–12 V from an external adapter and provides a clean 5 V rail to the board.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../Capture.png" data-desc-position="bottom"><img alt="Full Schematic" src="../Capture.png"></a></p>
+<p>📦 <strong><a href="../Individual_Subsystem.zip">Download Full Project ZIP — Individual_Subsystem.zip</a></strong></p>
 <hr>
 <h2 id="pcb-layout-layers">🪛 PCB Layout &amp; Layers</h2>
-<h3 id="top-copper-layer">Top Copper Layer</h3>
-<p align="center"><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="schem5.png" data-desc-position="bottom"><img src="schem5.png" width="850"></a></p>
-
-<h3 id="soldermask-views">Soldermask Views</h3>
-<p align="center">
-  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="schem3.png" data-desc-position="bottom"><img src="schem3.png" width="420"></a>
-  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="schem4.png" data-desc-position="bottom"><img src="schem4.png" width="420"></a>
-  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="schem1.png" data-desc-position="bottom"><img src="schem1.png" width="420"></a>
-  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="schem2.png" data-desc-position="bottom"><img src="schem2.png" width="420"></a>
-</p>
-
-<p>📦 <strong><a href="../Individual_Subsystem.zip">Download Project ZIP – Individual_Subsystem.zip</a></strong></p>
+<p><strong>Description:</strong><br>
+The PCB layout includes a two-layer design (top and bottom copper), with clear routing for power and sensor signals. Mounting holes and connector pads are positioned for easy assembly.</p>
+<p><strong>Layer Previews (from Cadence PCB Editor):</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">View</th>
+<th style="text-align: center;">Image</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>Top Copper / Outline</strong></td>
+<td style="text-align: center;"><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../schem5.png" data-desc-position="bottom"><img alt="Top Copper" src="../schem5.png"></a></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Top Soldermask</strong></td>
+<td style="text-align: center;"><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../schem3.png" data-desc-position="bottom"><img alt="Top Soldermask" src="../schem3.png"></a></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Bottom Soldermask</strong></td>
+<td style="text-align: center;"><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../schem4.png" data-desc-position="bottom"><img alt="Bottom Soldermask" src="../schem4.png"></a></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Bottom Copper</strong></td>
+<td style="text-align: center;"><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../schem1.png" data-desc-position="bottom"><img alt="Bottom Copper" src="../schem1.png"></a></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Full Board Overview</strong></td>
+<td style="text-align: center;"><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../schem2.png" data-desc-position="bottom"><img alt="Board Overview" src="../schem2.png"></a></td>
+</tr>
+</tbody>
+</table>
+<p>📦 <strong><a href="../Individual_Subsystem.zip">Download PCB + Schematic Files (ZIP)</a></strong></p>
 <h2 id="author">✍ Author</h2>
 <p><strong>Lakshanand Sugumar</strong><br>
 B.S.E. Robotics Engineering, Arizona State University<br>
-<em>Embedded Systems Design – Individual Subsystem</em><br>
-📅 Submitted: October 20, 2025</p>
+<em>EGR 304 — Individual Subsystem (Flex Sensor)</em><br>
+📅 Submitted October 20, 2025</p>
 
 
 
