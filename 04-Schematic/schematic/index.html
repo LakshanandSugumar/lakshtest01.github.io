@@ -607,6 +607,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Lakshanand’s Individual Subsystem – Schematic
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -616,6 +627,76 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#schematic" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Schematic
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pcb-layout-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      🪛 PCB Layout &amp; Layers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🪛 PCB Layout &amp; Layers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#top-copper-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Top Copper Layer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soldermask-views" class="md-nav__link">
+    <span class="md-ellipsis">
+      Soldermask Views
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#author" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✍ Author
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -755,6 +836,65 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#schematic" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Schematic
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pcb-layout-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      🪛 PCB Layout &amp; Layers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🪛 PCB Layout &amp; Layers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#top-copper-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Top Copper Layer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soldermask-views" class="md-nav__link">
+    <span class="md-ellipsis">
+      Soldermask Views
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#author" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✍ Author
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -777,122 +917,43 @@
 
 
 <h1 id="overview">🧠 Overview</h1>
-<p>This schematic represents the <strong>individual subsystem</strong> designed by <strong>Lakshanand Sugumar</strong> for the Embedded Systems Design course.<br>
-It integrates a <strong>PIC18F57Q43 Curiosity Nano</strong> with a <strong>5V linear voltage regulator</strong>, <strong>sensor circuit</strong>, and <strong>header connections</strong> for interfacing with the main team system.</p>
-<p>The design focuses on:</p>
+<p>This schematic represents the <strong>individual subsystem</strong> designed by <strong>Lakshanand Sugumar</strong> for <em>EGR 304: Embedded Systems Design</em>.<br>
+It integrates a <strong>PIC18F57Q43 Curiosity Nano</strong> with a <strong>5 V linear voltage regulator</strong>, sensor circuit, and header connections for interfacing with the main system.</p>
+<p>Key design features:</p>
 <ul>
-<li>Stable 5V regulation from a 9–12V barrel jack input</li>
-<li>Safe current-limited power using an inline fuse</li>
-<li>Analog signal conditioning for the sensor (amplified + filtered)</li>
-<li>Proper bypass capacitors and power decoupling</li>
-<li>UART headers for serial data communication</li>
-<li>Debug LED and resistors for MCU feedback</li>
+<li>Stable 5 V regulation from a 9–12 V barrel-jack input</li>
+<li>Inline fuse for current protection</li>
+<li>Amplified analog sensor with op-amp conditioning</li>
+<li>Proper bypass capacitors on all power pins</li>
+<li>UART headers for serial communication</li>
+<li>Debug LED and button for diagnostics</li>
 </ul>
 <hr>
-<h1 id="schematic">⚙️ Schematic</h1>
+<h2 id="schematic">⚙️ Schematic</h2>
 <p align="center">
-  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="Capture.png" data-desc-position="bottom"><img src="Capture.png" alt="Full schematic" width="800"></a>
-  <br>
-  <em>Figure 1 – Individual subsystem schematic showing Curiosity Nano, voltage regulation, and analog sensor interface.</em>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="Capture.png" data-desc-position="bottom"><img src="Capture.png" alt="Schematic" width="850"></a>
 </p>
 
+<p>📦 <strong><a href="../Individual_Subsystem.zip">Download Project ZIP – Individual_Subsystem.zip</a></strong></p>
 <hr>
-<h1 id="pcb-layout-layers">🪛 PCB Layout &amp; Layers</h1>
+<h2 id="pcb-layout-layers">🪛 PCB Layout &amp; Layers</h2>
 <h3 id="top-copper-layer">Top Copper Layer</h3>
-<p align="center"><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="schem5.png" data-desc-position="bottom"><img src="schem5.png" width="800"></a></p>
+<p align="center"><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="schem5.png" data-desc-position="bottom"><img src="schem5.png" width="850"></a></p>
 
 <h3 id="soldermask-views">Soldermask Views</h3>
 <p align="center">
-  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="schem3.png" data-desc-position="bottom"><img src="schem3.png" width="380"></a>
-  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="schem4.png" data-desc-position="bottom"><img src="schem4.png" width="380"></a>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="schem3.png" data-desc-position="bottom"><img src="schem3.png" width="420"></a>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="schem4.png" data-desc-position="bottom"><img src="schem4.png" width="420"></a>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="schem1.png" data-desc-position="bottom"><img src="schem1.png" width="420"></a>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="schem2.png" data-desc-position="bottom"><img src="schem2.png" width="420"></a>
 </p>
 
-<h3 id="outline-bottom-copper">Outline &amp; Bottom Copper</h3>
-<p align="center">
-  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="schem1.png" data-desc-position="bottom"><img src="schem1.png" width="400"></a>
-  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="schem2.png" data-desc-position="bottom"><img src="schem2.png" width="400"></a>
-</p>
-
-<hr>
-<h1 id="resources">📦 Resources</h1>
-<table>
-<thead>
-<tr>
-<th>File</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="../ExampleSchematic.pdf">ExampleSchematic.pdf</a></td>
-<td>Full schematic PDF</td>
-</tr>
-<tr>
-<td><a href="../dummyZip.zip">dummyZip.zip</a></td>
-<td>Zipped Cadence/KiCad project (symbols, footprints, board)</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h1 id="component-summary">🧩 Component Summary</h1>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">Ref</th>
-<th style="text-align: left;">Component</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">U8</td>
-<td style="text-align: left;">5V Linear Regulator (VR_LS)</td>
-<td style="text-align: left;">Converts 9–12V input to 5V</td>
-</tr>
-<tr>
-<td style="text-align: center;">U9</td>
-<td style="text-align: left;">Amplified Sensor</td>
-<td style="text-align: left;">Analog signal conditioning</td>
-</tr>
-<tr>
-<td style="text-align: center;">J5</td>
-<td style="text-align: left;">Curiosity Nano LS</td>
-<td style="text-align: left;">Main MCU interface</td>
-</tr>
-<tr>
-<td style="text-align: center;">Q1</td>
-<td style="text-align: left;">Diode</td>
-<td style="text-align: left;">Reverse polarity protection</td>
-</tr>
-<tr>
-<td style="text-align: center;">R16–R18</td>
-<td style="text-align: left;">Resistors</td>
-<td style="text-align: left;">Bias and current limiting</td>
-</tr>
-<tr>
-<td style="text-align: center;">C7–C8</td>
-<td style="text-align: left;">Capacitors</td>
-<td style="text-align: left;">Bypass and filtering</td>
-</tr>
-<tr>
-<td style="text-align: center;">J3–J6</td>
-<td style="text-align: left;">Headers</td>
-<td style="text-align: left;">UART, sensor, and power output</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h1 id="verification">✅ Verification</h1>
-<p>✔️ <strong>ERC / DRC Passed</strong> – no open nets or rule violations<br>
-✔️ <strong>Custom symbols include initials “LS”</strong><br>
-✔️ <strong>Proper decoupling capacitors</strong> on all power pins<br>
-✔️ <strong>Ground return path and clearance verified</strong></p>
-<hr>
-<h1 id="author">✍️ Author</h1>
+<p>📦 <strong><a href="../Individual_Subsystem.zip">Download Project ZIP – Individual_Subsystem.zip</a></strong></p>
+<h2 id="author">✍ Author</h2>
 <p><strong>Lakshanand Sugumar</strong><br>
 B.S.E. Robotics Engineering, Arizona State University<br>
 <em>Embedded Systems Design – Individual Subsystem</em><br>
-📅 <em>Submitted: October 20, 2025</em></p>
+📅 Submitted: October 20, 2025</p>
 
 
 
