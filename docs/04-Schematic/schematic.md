@@ -28,11 +28,12 @@ The PCB layout includes a two-layer design (top and bottom copper), with clear r
 
 |           View           |              Image               |
 | :----------------------: | :------------------------------: |
-| **Top Copper / Outline** |    ![Top Copper](schem5.png)     |
+| **Full Board Overview**  |  ![Board Overview](schem6.png)   |
 |    **Top Soldermask**    |  ![Top Soldermask](schem3.png)   |
 |  **Bottom Soldermask**   | ![Bottom Soldermask](schem4.png) |
 |    **Bottom Copper**     |   ![Bottom Copper](schem1.png)   |
-| **Full Board Overview**  |  ![Board Overview](schem2.png)   |
+| **Top Copper / Outline** |    ![Top Copper](schem5.png)     |
+| **Full Board Overview**  |  ![Board Overview](schem6.png)   |
 
 📦 **[Download PCB + Schematic Files (ZIP)](Individual_Subsystem.zip)**
 
