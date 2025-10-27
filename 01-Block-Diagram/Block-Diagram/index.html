@@ -511,24 +511,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#component-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Component Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#signal-flow" class="md-nav__link">
-    <span class="md-ellipsis">
-      Signal Flow
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#subsystem-role" class="md-nav__link">
     <span class="md-ellipsis">
       Subsystem Role
@@ -831,24 +813,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#component-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Component Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#signal-flow" class="md-nav__link">
-    <span class="md-ellipsis">
-      Signal Flow
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#subsystem-role" class="md-nav__link">
     <span class="md-ellipsis">
       Subsystem Role
@@ -885,51 +849,11 @@
 <h2 id="overview">Overview</h2>
 <p>This subsystem is responsible for reading data from a flex sensor and communicating with the motor subsystem to control movement based on the sensor’s readings. All components within this subsystem are powered through a 5 V voltage regulator, which is supplied by a 9 V input, as shown by the dashed box in the diagram.</p>
 <p>The Microchip PIC18F57Q43 Curiosity Nano acts as the main controller, handling the analog input from the flex sensor and sending digital control signals to other subsystems.</p>
-<p>To get some initial formatting help, one can view <a href="https://embedded-systems-design.github.io/EGR304DataSheetTemplate/Appendix/basic-markdown-examples/">"here"</a> some basic techniques.</p>
-<h2 id="component-overview">Component Overview</h2>
-<ol>
-<li>Flex Sensor (FSR402)</li>
-</ol>
-<p>Positioned on the left side of the diagram.</p>
-<p>This sensor detects bending or pressure changes.</p>
-<p>Its output passes through a voltage divider to bring the signal into the 0–5 V analog range.</p>
-<p>This analog signal is fed into the RA0 (AN0) analog input pin on the microcontroller.</p>
-<ol>
-<li>Voltage Regulator (7805)</li>
-</ol>
-<p>Converts 9 V input into a stable 5 V supply.</p>
-<p>Powers both the flex sensor circuitry and the microcontroller.</p>
-<ol>
-<li>Microchip PIC18F57Q43 Curiosity Nano</li>
-</ol>
-<p>Located at the center of the diagram.</p>
-<p>Processes the analog signal from the flex sensor (RA0/AN0).</p>
-<p>Uses RA1, RB2, and RC4 pins to send digital output signals to the motor subsystem through connectors.</p>
-<p>These signals determine whether the motor should start, continue, or stop.</p>
-<ol>
-<li>Connectors</li>
-</ol>
-<p>Connector 2: Carries the flex sensor’s analog signal into the controller and digital outputs back to other parts of the system.</p>
-<p>Connector 4: Shown in the diagram to indicate signals received from another subsystem’s rotary sensor — not part of this subsystem. This labeling clarifies that the microcontroller receives rotary data externally, but the rotary sensor hardware is implemented elsewhere.</p>
-<ol>
-<li>Motor Interface</li>
-</ol>
-<p>Located at the bottom of the diagram.</p>
-<p>This subsystem sends digital control signals to the motor subsystem.</p>
-<p>These signals are generated based on the flex sensor’s readings and are used to coordinate motor movement.</p>
-<h2 id="signal-flow">Signal Flow</h2>
-<ol>
-<li>Input:</li>
-</ol>
-<p>Analog from Flex Sensor → RA0 (AN0)</p>
-<ol>
-<li>Outputs:</li>
-</ol>
-<p>Digital control signals via RA1, RB2, RC4 → Motor Subsystem</p>
+<p>To get some initial formatting help, one can view <a href="https://embedded-systems-design.github.io/EGR304DataSheetTemplate/Appendix/basic-markdown-examples/">"here"</a> some basic techniques.\</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../individual_block_diagram.drawio%20%283%29.png" data-desc-position="bottom"><img alt=" Flex Sensor Subsystem Block diagram " src="../individual_block_diagram.drawio%20%283%29.png"></a></p>
 <h2 id="subsystem-role">Subsystem Role</h2>
 <p>The Flex Sensor Subsystem plays the role of a sensor-driven control unit. It constantly monitors the flex sensor’s readings, processes the analog signal, and uses that information to decide what commands to send to the motor.</p>
 <p>The rotary sensor signals shown on the right are external inputs from another subsystem, not part of this subsystem’s hardware. They are included in the diagram purely to illustrate how this subsystem interfaces with others in the overall system.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../individual_block_diagram.drawio%20%283%29.png" data-desc-position="bottom"><img alt=" Flex Sensor Subsystem Block diagram " src="../individual_block_diagram.drawio%20%283%29.png"></a></p>
 
 
 
