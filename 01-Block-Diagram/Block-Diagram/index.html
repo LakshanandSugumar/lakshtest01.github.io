@@ -849,7 +849,8 @@
 <h2 id="overview">Overview</h2>
 <p>This subsystem is responsible for reading data from a flex sensor and communicating with the motor subsystem to control movement based on the sensor’s readings. All components within this subsystem are powered through a 5 V voltage regulator, which is supplied by a 9 V input, as shown by the dashed box in the diagram.</p>
 <p>The Microchip PIC18F57Q43 Curiosity Nano acts as the main controller, handling the analog input from the flex sensor and sending digital control signals to other subsystems.</p>
-<p>To get some initial formatting help, one can view <a href="https://embedded-systems-design.github.io/EGR304DataSheetTemplate/Appendix/basic-markdown-examples/">"here"</a> some basic techniques.\</p>
+<p>This subsystem connects directly with two other subsystems — the Motor Subsystem and the Rotary Sensor Subsystem. Together, these components enable the system to compare the rotary sensor inputs with the flex sensor readings to determine whether the motor is functioning as intended or if it has become disengaged from the door mechanism.</p>
+<p>This interaction ensures accurate motion tracking and prevents unnecessary motor activity, improving both safety and energy efficiency. For a complete overview of how all subsystems integrate to form the full automatic door opener system, visit the  <a href="https://egr304-2025-f-103.github.io">team report.</a></p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../individual_block_diagram.drawio%20%283%29.png" data-desc-position="bottom"><img alt=" Flex Sensor Subsystem Block diagram " src="../individual_block_diagram.drawio%20%283%29.png"></a></p>
 <h2 id="subsystem-role">Subsystem Role</h2>
 <p>The Flex Sensor Subsystem plays the role of a sensor-driven control unit. It constantly monitors the flex sensor’s readings, processes the analog signal, and uses that information to decide what commands to send to the motor.</p>

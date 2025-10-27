@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pin-table" class="md-skip">
+        <a href="#block-flex-sensor" class="md-skip">
           Skip to content
         </a>
       
@@ -548,15 +548,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pin-table" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pin Table
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#block-flex-sensor" class="md-nav__link">
     <span class="md-ellipsis">
       Block: Flex Sensor
@@ -566,9 +557,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#block-signal-conditioning-voltage-divider" class="md-nav__link">
+  <a href="#block-voltage-divider" class="md-nav__link">
     <span class="md-ellipsis">
-      Block: Signal-Conditioning / Voltage Divider
+      Block: Voltage Divider
     </span>
   </a>
   
@@ -602,9 +593,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#microcontroller-short-comparison-required-by-checklist" class="md-nav__link">
+  <a href="#microcontroller" class="md-nav__link">
     <span class="md-ellipsis">
-      Microcontroller (short comparison — required by checklist)
+      Microcontroller
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pin-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pin Table
     </span>
   </a>
   
@@ -849,15 +849,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pin-table" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pin Table
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#block-flex-sensor" class="md-nav__link">
     <span class="md-ellipsis">
       Block: Flex Sensor
@@ -867,9 +858,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#block-signal-conditioning-voltage-divider" class="md-nav__link">
+  <a href="#block-voltage-divider" class="md-nav__link">
     <span class="md-ellipsis">
-      Block: Signal-Conditioning / Voltage Divider
+      Block: Voltage Divider
     </span>
   </a>
   
@@ -903,9 +894,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#microcontroller-short-comparison-required-by-checklist" class="md-nav__link">
+  <a href="#microcontroller" class="md-nav__link">
     <span class="md-ellipsis">
-      Microcontroller (short comparison — required by checklist)
+      Microcontroller
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pin-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pin Table
     </span>
   </a>
   
@@ -936,55 +936,7 @@
 
   <h1>Component Selection (Individual — Flex Sensor Subsystem)</h1>
 
-<blockquote>
-<p><strong>Scope (Laksh / Flex Sensor Subsystem):</strong>
-Flex Sensor,
-Signal-Conditioning/Voltage Divider,
-5 V Regulator, External Power Source,
-Connectors used by this subsystem, and
-Short Microcontroller comparison.</p>
-<p><strong>Interfaces:</strong>
-Outputs digital lines <strong>RA1, RB2, RC4</strong> to the Motor subsystem via Connector 2. Optional rotary analog signal arrives on <strong>RA2/AN2</strong> from a different subsystem (shown for context only).</p>
-</blockquote>
-<h2 id="pin-table">Pin Table</h2>
-<table>
-<thead>
-<tr>
-<th>Function</th>
-<th>PIC Pin</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Flex sensor ADC</td>
-<td><strong>RA0 / AN0</strong></td>
-<td>Divider output 0–5 V</td>
-</tr>
-<tr>
-<td>Rotary sensor ADC <em>(external)</em></td>
-<td><strong>RA2 / AN2</strong></td>
-<td>From Rotary subsystem (interface only)</td>
-</tr>
-<tr>
-<td>Motor control 1 (digital out)</td>
-<td><strong>RA1</strong></td>
-<td>To Motor subsystem via Connector 2</td>
-</tr>
-<tr>
-<td>Motor control 2 (digital out)</td>
-<td><strong>RB2</strong></td>
-<td>〃</td>
-</tr>
-<tr>
-<td>Motor control 3 (digital out)</td>
-<td><strong>RC4</strong></td>
-<td>〃</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="block-flex-sensor">Block: Flex Sensor</h2>
+<h2 id="block-flex-sensor"><strong>Block: Flex Sensor</strong></h2>
 <p><strong>Role:</strong> Measures bend angle; resistance increases with bend. Routed through a divider to 0–5 V for the ADC.</p>
 <table>
 <thead>
@@ -1029,7 +981,7 @@ Outputs digital lines <strong>RA1, RB2, RC4</strong> to the Motor subsystem via 
 <a href="../../image/fs-l-095-103-rh.png">FS-L-095-103-RH</a></p>
 <p><strong>Rationale:</strong> Fits the mechanical reach and provides a large, clean ADC span with a simple divider. It’s well-documented and readily available in class-friendly quantities.</p>
 <hr>
-<h2 id="block-signal-conditioning-voltage-divider">Block: Signal-Conditioning / Voltage Divider</h2>
+<h2 id="block-voltage-divider"><strong>Block: Voltage Divider</strong></h2>
 <p><strong>Role:</strong> Convert the flex sensor’s resistance change to a 0–5 V signal for <strong>RA0/AN0</strong>; optionally filter/buffer.</p>
 <table>
 <thead>
@@ -1072,7 +1024,7 @@ Outputs digital lines <strong>RA1, RB2, RC4</strong> to the Motor subsystem via 
 <p><strong>Choice:</strong> <strong>Option 2: Divider + RC</strong>, with an upgrade path to <strong>Option 3</strong> if noise or ADC impedance issues are observed.<br>
 <strong>Rationale:</strong> RC filtering stabilizes the measurement with negligible cost/complexity; buffering remains a drop-in improvement if needed.</p>
 <hr>
-<h2 id="block-5-v-regulator-from-9-v-source">Block: 5 V Regulator (from 9 V source)</h2>
+<h2 id="block-5-v-regulator-from-9-v-source"><strong>Block: 5 V Regulator (from 9 V source)</strong></h2>
 <p><strong>Role:</strong> Provide regulated 5 V to the Curiosity Nano + sensor chain.</p>
 <table>
 <thead>
@@ -1119,7 +1071,7 @@ I would switch to <strong>LM2596</strong> if total current rises.</p>
 <p><strong>Thermal note:</strong> <span class="arithmatex">\( P*{\text{diss}} = (9\ \text{V} - 5\ \text{V}) \times I*{\text{total}} \)</span>.<br>
 <em>Example:</em> at 120 mA → <span class="arithmatex">\(0.48\ \text{W}\)</span> (fine on TO-220 with airflow). Add a small heatsink if <span class="arithmatex">\(&gt;0.8\ \text{W}\)</span>.</p>
 <hr>
-<h2 id="block-external-power-source-feeds-the-5-v-rail">Block: External Power Source (feeds the 5 V rail)</h2>
+<h2 id="block-external-power-source-feeds-the-5-v-rail"><strong>Block: External Power Source (feeds the 5 V rail)</strong></h2>
 <table>
 <thead>
 <tr>
@@ -1163,7 +1115,7 @@ I would switch to <strong>LM2596</strong> if total current rises.</p>
 for bench bring-up; consider <strong>2×18650 + buck</strong> for mobile demos later.</p>
 <p><strong>Rationale:</strong> The adapter minimizes risk and simplifies testing; battery paths add charging/cutoff complexity not needed for MVP.</p>
 <hr>
-<h2 id="block-connectors-sensor-input-subsystem-headers">Block: Connectors (sensor input + subsystem headers)</h2>
+<h2 id="block-connectors-sensor-input-subsystem-headers"><strong>Block: Connectors (sensor input + subsystem headers)</strong></h2>
 <table>
 <thead>
 <tr>
@@ -1207,7 +1159,7 @@ for bench bring-up; consider <strong>2×18650 + buck</strong> for mobile demos l
 on the PCB for field connections; <strong>0.1″ headers</strong> for bench adapters.</p>
 <p><strong>Rationale:</strong> XH gives retention and current capacity on-device; 0.1″ is convenient during prototyping.</p>
 <hr>
-<h2 id="microcontroller-short-comparison-required-by-checklist">Microcontroller (short comparison — required by checklist)</h2>
+<h2 id="microcontroller"><strong>Microcontroller</strong></h2>
 <table>
 <thead>
 <tr>
@@ -1249,6 +1201,44 @@ on the PCB for field connections; <strong>0.1″ headers</strong> for bench adap
 <p><strong>Choice:</strong> <strong>PIC18F57Q43 Curiosity Nano</strong>
 <a href="../../image/pic18f57q43-nano.webp">Curiosity Nano</a>
 <strong>Rationale:</strong> Lowest risk and fastest path for this course: on-board debugger, USB power, and immediate access to RA0/RA2 (ADC) + RA1/RB2/RC4 (digital outs). Provided in class</p>
+<hr>
+<h2 id="pin-table">Pin Table</h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>PIC Pin</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Flex sensor ADC</td>
+<td><strong>RA0 / AN0</strong></td>
+<td>Divider output 0–5 V</td>
+</tr>
+<tr>
+<td>Rotary sensor ADC <em>(external)</em></td>
+<td><strong>RA2 / AN2</strong></td>
+<td>From Rotary subsystem (interface only)</td>
+</tr>
+<tr>
+<td>Motor control 1 (digital out)</td>
+<td><strong>RA1</strong></td>
+<td>To Motor subsystem via Connector 2</td>
+</tr>
+<tr>
+<td>Motor control 2 (digital out)</td>
+<td><strong>RB2</strong></td>
+<td>〃</td>
+</tr>
+<tr>
+<td>Motor control 3 (digital out)</td>
+<td><strong>RC4</strong></td>
+<td>〃</td>
+</tr>
+</tbody>
+</table>
 <hr>
 
 
