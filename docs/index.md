@@ -5,11 +5,8 @@ tags:
   - tag2
 ---
 
-# Lakshanand Sugumar Datasheet
-
-Welcome to the EGR 304 Data Sheet website. This site provides documentation, resources, and examples for EGR 304 projects. Here you will find block diagrams, component selections, schematics, power budgets, and more, all organized for easy access and learning.
-
-**Submission Date:** September 1, 2025
+# Welcome to Lakshanand Sugumar’s Subsystem Datasheet
+## Automatic Door Opener — Team 103
 
 ## Introduction
 
