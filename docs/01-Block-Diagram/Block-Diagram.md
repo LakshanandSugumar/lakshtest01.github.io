@@ -11,7 +11,9 @@ This subsystem is responsible for reading data from a flex sensor and communicat
 
 The Microchip PIC18F57Q43 Curiosity Nano acts as the main controller, handling the analog input from the flex sensor and sending digital control signals to other subsystems.
 
-To get some initial formatting help, one can view ["here"](https://embedded-systems-design.github.io/EGR304DataSheetTemplate/Appendix/basic-markdown-examples/) some basic techniques.\
+This subsystem connects directly with two other subsystems — the Motor Subsystem and the Rotary Sensor Subsystem. Together, these components enable the system to compare the rotary sensor inputs with the flex sensor readings to determine whether the motor is functioning as intended or if it has become disengaged from the door mechanism.
+
+This interaction ensures accurate motion tracking and prevents unnecessary motor activity, improving both safety and energy efficiency. For a complete overview of how all subsystems integrate to form the full automatic door opener system, visit the  [team report.](https://egr304-2025-f-103.github.io)
 
 ![ Flex Sensor Subsystem Block diagram ](individual_block_diagram.drawio (3).png)
 
