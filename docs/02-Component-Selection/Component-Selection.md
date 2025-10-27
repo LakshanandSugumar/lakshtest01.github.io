@@ -2,29 +2,8 @@
 title: Component Selection (Individual — Flex Sensor Subsystem)
 ---
 
-> **Scope (Laksh / Flex Sensor Subsystem):**
-> Flex Sensor,
-> Signal-Conditioning/Voltage Divider,
-> 5 V Regulator, External Power Source,
-> Connectors used by this subsystem, and
-> Short Microcontroller comparison.
 
-> **Interfaces:**
-> Outputs digital lines **RA1, RB2, RC4** to the Motor subsystem via Connector 2. Optional rotary analog signal arrives on **RA2/AN2** from a different subsystem (shown for context only).
-
-## Pin Table
-
-| Function                       | PIC Pin       | Notes                                  |
-| ------------------------------ | ------------- | -------------------------------------- |
-| Flex sensor ADC                | **RA0 / AN0** | Divider output 0–5 V                   |
-| Rotary sensor ADC _(external)_ | **RA2 / AN2** | From Rotary subsystem (interface only) |
-| Motor control 1 (digital out)  | **RA1**       | To Motor subsystem via Connector 2     |
-| Motor control 2 (digital out)  | **RB2**       | 〃                                     |
-| Motor control 3 (digital out)  | **RC4**       | 〃                                     |
-
----
-
-## Block: Flex Sensor
+## **Block: Flex Sensor**
 
 **Role:** Measures bend angle; resistance increases with bend. Routed through a divider to 0–5 V for the ADC.
 
@@ -42,7 +21,7 @@ title: Component Selection (Individual — Flex Sensor Subsystem)
 
 ---
 
-## Block: Signal-Conditioning / Voltage Divider
+## **Block: Voltage Divider**
 
 **Role:** Convert the flex sensor’s resistance change to a 0–5 V signal for **RA0/AN0**; optionally filter/buffer.
 
@@ -57,7 +36,7 @@ title: Component Selection (Individual — Flex Sensor Subsystem)
 
 ---
 
-## Block: 5 V Regulator (from 9 V source)
+## **Block: 5 V Regulator (from 9 V source)**
 
 **Role:** Provide regulated 5 V to the Curiosity Nano + sensor chain.
 
@@ -78,7 +57,7 @@ _Example:_ at 120 mA → \(0.48\ \text{W}\) (fine on TO-220 with airflow). Add a
 
 ---
 
-## Block: External Power Source (feeds the 5 V rail)
+## **Block: External Power Source (feeds the 5 V rail)**
 
 | Solution                                                   | Photo                                          |             Cost | Link                                                                                                       | Pros                                                      | Cons                                          |
 | ---------------------------------------------------------- | ---------------------------------------------- | ---------------: | ---------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- | --------------------------------------------- |
@@ -94,7 +73,7 @@ for bench bring-up; consider **2×18650 + buck** for mobile demos later.
 
 ---
 
-## Block: Connectors (sensor input + subsystem headers)
+## **Block: Connectors (sensor input + subsystem headers)**
 
 | Solution                                            | Photo                                                  |     Cost | Link                                                                                              | Pros                                                 | Cons                              |
 | --------------------------------------------------- | ------------------------------------------------------ | -------: | ------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | --------------------------------- |
@@ -110,7 +89,7 @@ on the PCB for field connections; **0.1″ headers** for bench adapters.
 
 ---
 
-## Microcontroller (short comparison — required by checklist)
+## **Microcontroller**
 
 | Solution                                          | Photo                                                  |     Cost | Link                                                                                   | Pros                                               | Cons                                           |
 | ------------------------------------------------- | ------------------------------------------------------ | -------: | -------------------------------------------------------------------------------------- | -------------------------------------------------- | ---------------------------------------------- |
@@ -121,5 +100,16 @@ on the PCB for field connections; **0.1″ headers** for bench adapters.
 **Choice:** **PIC18F57Q43 Curiosity Nano**
 [Curiosity Nano](../image/pic18f57q43-nano.webp)
 **Rationale:** Lowest risk and fastest path for this course: on-board debugger, USB power, and immediate access to RA0/RA2 (ADC) + RA1/RB2/RC4 (digital outs). Provided in class
+
+---
+## Pin Table
+
+| Function                       | PIC Pin       | Notes                                  |
+| ------------------------------ | ------------- | -------------------------------------- |
+| Flex sensor ADC                | **RA0 / AN0** | Divider output 0–5 V                   |
+| Rotary sensor ADC _(external)_ | **RA2 / AN2** | From Rotary subsystem (interface only) |
+| Motor control 1 (digital out)  | **RA1**       | To Motor subsystem via Connector 2     |
+| Motor control 2 (digital out)  | **RB2**       | 〃                                     |
+| Motor control 3 (digital out)  | **RC4**       | 〃                                     |
 
 ---
