@@ -11,15 +11,13 @@ Bypass capacitors (0.1 µF) are placed near each VDD pin. The regulator receives
 
 ---
 
-title: 🪛 PCB Layout & Layers
+title: PCB Layout
 
 **Description:**  
 The PCB layout includes a two-layer design (top and bottom copper), with clear routing for power and sensor signals. Mounting holes and connector pads are positioned for easy assembly.
 
 **Layer Previews (from Cadence PCB Editor):**
 
-|          View           |             Image             |
-| :---------------------: | :---------------------------: |
-| **Full Board Overview** | ![Board Overview](schem6.png) |
+![Board Overview](schem6.png)
 
-## 📦 **[Download PCB + Schematic Files (ZIP)](Individual_Subsystem.zip)**
+##The Zip folder of the project can be downloaded by . **[Cliking here](Individual_Subsystem.zip)**
