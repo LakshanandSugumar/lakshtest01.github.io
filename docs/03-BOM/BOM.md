@@ -1,30 +1,16 @@
 ---
 title: Bill of Materials
+---
 
+## **Bill of Materials – Lakshanand's Individual Subsystem**
 
-## **Bill of Materials – Lakshanand's Individual Subsystem**  
-_Revised: October 31, 2025 — 22:24:48_
+_Revised: October 31, 2025_
 
-| Item | Qty | Reference | Part / Description |
-| ---- | --- | ---------- | ------------------ |
-| 1 | 1 | C7 | 0.1 µF Capacitor |
-| 2 | 1 | C8 | CAP (unspecified value) |
-| 3 | 1 | C9 | 0.1 µF Capacitor |
-| 4 | 1 | F1 | FUSE/SM (Surface-mount fuse) |
-| 5 | 1 | J1 | Barrel Jack Connector |
-| 6 | 1 | J7 | TestPoint1 |
-| 7 | 1 | J8 | TestPoint2 |
-| 8 | 1 | J9 | TestPoint3 |
-| 9 | 1 | J10 | TestPoint6 |
-| 10 | 1 | J11 | TestPoint7 |
-| 11 | 1 | J12 | TestPoint5 |
-| 12 | 1 | J13 | TestPoint4 |
-| 13 | 1 | J14 | 8-Pin PCB Connector (CONN PCB 8) |
-| 14 | 1 | PCND2 | PIC18F57Q43 Curiosity Nano (MCU Module) |
-| 15 | 1 | R20 | 15 kΩ Resistor |
-| 16 | 1 | R21 | 16 kΩ Resistor |
-| 17 | 1 | U8 | 5 V Voltage Regulator (VR_LS) |
-| 18 | 1 | U9 | Variable Resistor / Trimpot (10 kΩ – 20 kΩ) |
-| 19 | 1 | U10 | MCP6004 Op-Amp |
+| Part Name / Description | Unit Qty | Per Unit Cost | Total Cost | Manufacturer      | Manufacturer Part #       | Supplier            | Vendor Part Number | Datasheet Link                                                                                | Supplier Part # | # Ordered | Date Ordered | # Received | Schematic Reference Designators |
+| ----------------------- | -------- | ------------- | ---------- | ----------------- | ------------------------- | ------------------- | ------------------ | --------------------------------------------------------------------------------------------- | --------------- | --------- | ------------ | ---------- | ------------------------------- |
+| Surface-Mount Fuse      | 1        |               |            | Bourns (example)  | SF-1206FP050-2 (example)  | Digi-Key (example)  | 652-SF-1206FP050-2 | https://www.mouser.com/datasheet/652/SF-1206FP050-2.pdf :contentReference[oaicite:0]{index=0} |                 |           |              |            | F1                              |
+| 8-Pin PCB Connector     | 2        | 8.99          | 8.99       | (unspecified)     | (unspecified)             | Amazon              | (user link)        | (insert link)                                                                                 |                 |           |              |            | J14                             |
+| 15 kΩ Resistor          | 1        |               |            | Edgelec (example) | (example part number)     | Amazon              | (insert link)      | (insert datasheet link)                                                                       |                 |           |              |            | R20                             |
+| Flex Sensor 10 kΩ–20 kΩ | 1        |               |            | Adafruit          | 182 Long Flex Bend Sensor | Adafruit / Digi-Key | ADA-182            | https://www.adafruit.com/product/182/data :contentReference[oaicite:1]{index=1}               |                 |           |              |            | U9                              |
 
 ---
