@@ -18,13 +18,8 @@ The PCB layout includes a two-layer design (top and bottom copper), with clear r
 
 **Layer Previews (from Cadence PCB Editor):**
 
-|           View           |              Image               |
-| :----------------------: | :------------------------------: |
-| **Full Board Overview**  |  ![Board Overview](schem6.png)   |
-|    **Top Soldermask**    |  ![Top Soldermask](schem3.png)   |
-|  **Bottom Soldermask**   | ![Bottom Soldermask](schem4.png) |
-|    **Bottom Copper**     |   ![Bottom Copper](schem1.png)   |
-| **Top Copper / Outline** |    ![Top Copper](schem5.png)     |
-| **Full Board Overview**  |  ![Board Overview](schem6.png)   |
+|          View           |             Image             |
+| :---------------------: | :---------------------------: |
+| **Full Board Overview** | ![Board Overview](schem6.png) |
 
 ## 📦 **[Download PCB + Schematic Files (ZIP)](Individual_Subsystem.zip)**
