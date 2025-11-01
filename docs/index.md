@@ -25,8 +25,8 @@ For a complete overview of the full system design and team collaboration, visit 
 
 ### My Contribution
 
-Created and maintained a public GitHub test repository for initial code and documentation setup.
+- Created and maintained a public GitHub test repository for initial code and documentation setup.
 
-Managed the team’s main GitHub repository, ensuring version control, organization, and consistent updates across all subsystems.
+- Managed the team’s main GitHub repository, ensuring version control, organization, and consistent updates across all subsystems.
 
-Served as the Assignment Leader, coordinating team tasks, integrating individual subsystem work, and ensuring timely submission of deliverables to Canvas.
+- Served as the Assignment Leader, coordinating team tasks, integrating individual subsystem work, and ensuring timely submission of deliverables to Canvas.
