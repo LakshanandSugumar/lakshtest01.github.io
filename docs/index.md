@@ -6,15 +6,14 @@ tags:
 ---
 
 # Welcome to Lakshanand Sugumar’s Subsystem Datasheet
+
 ## Automatic Door Opener — Team 103
 
 ## Introduction
 
 This datasheet focuses on the design and programming of the Flex Sensor in the Private Use Automatic Door Opener
 
-### Project Summary
-
-- PROJECT SUMMARY
+## Project Summary
 
 This project focuses on the Motor Control Subsystem — one of the four key subsystems of the Automatic Door Opener. The overall system is designed to enable door operation through sensors rather than traditional buttons or handles, providing hands-free access for improved safety, convenience, and accessibility in households where users often have their hands full.
 
