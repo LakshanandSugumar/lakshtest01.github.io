@@ -19,7 +19,7 @@ This subsystem interfaces directly with both the **Motor Subsystem** and the **R
 
 This interaction improves safety, prevents motor overrun, and reduces power waste. For a full system-level view of all interconnected subsystems, refer to the [team report.](https://egr304-2025-f-103.github.io)
 
-![Flex Sensor Subsystem Block diagram](individual_block_diagram.drawio (3).png)
+![Flex Sensor Subsystem Block diagram-Updated](individual_block_diagram.drawio (3).png)
 
 ## Subsystem Role
 
