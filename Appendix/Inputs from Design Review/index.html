@@ -817,58 +817,19 @@
   <h1>Appendix – Inputs from Design Review</h1>
 
 <h3 id="action-items-feedback-summary">Action Items / Feedback Summary</h3>
-<ol>
-<li>
-<p><strong>Remove unnecessary resistor</strong> in the linear voltage regulator path</p>
-</li>
-<li>
-<p>The resistor currently tied between +5 V and GND is not required and should be deleted.</p>
-</li>
-<li>
-<p><strong>Add thermal reliefs</strong></p>
-</li>
-<li>
-<p>Ensure all through-hole pads (especially high-current or ground pads) have thermal relief spokes to improve solderability.</p>
-</li>
-<li>
-<p><strong>Add test points for every signal on the 8-pin ribbon connector</strong></p>
-</li>
-<li>
-<p>One labeled test point per pin for debugging and probing.</p>
-</li>
-<li>
-<p><strong>Improve ground routing strategy</strong></p>
-</li>
-<li>
-<p>Do <strong>not</strong> route every GND pin back to the barrel jack pad.</p>
-</li>
-<li>
-<p>Instead, use a <strong>ground plane (bottom layer)</strong> for return paths and improved noise performance.</p>
-</li>
-<li>
-<p><strong>Use top layer for the 5 V power net</strong> if possible</p>
-</li>
-<li>
-<p>Reduces via count and keeps power trace shorter and wider.</p>
-</li>
-<li>
-<p><strong>Name all nets clearly</strong></p>
-</li>
-<li>
-<p>Avoid default names like <code>N0001</code>.</p>
-</li>
-<li>
-<p>Use meaningful labels (e.g., <code>FLEX_OUT</code>, <code>ADC_VIN</code>, <code>5V_IN</code>, <code>MOTOR_EN</code>, etc.).</p>
-</li>
-<li>
-<p><strong>Flex sensor mechanical accommodation</strong></p>
-</li>
-<li>If the flex sensor readings saturate or the hinge angle exceeds its bend rating:<ul>
+<ul>
+<li>The resistor currently tied between +5 V and GND is not required and should be deleted.</li>
+<li>Ensure all through-hole pads (especially high-current or ground pads) have thermal relief spokes to improve solderability.</li>
+<li>One labeled test point per pin for debugging and probing.</li>
+<li>Do <strong>not</strong> route every GND pin back to the barrel jack pad.</li>
+<li>Instead, use a <strong>ground plane (bottom layer)</strong> for return paths and improved noise performance.</li>
+<li>Reduces via count and keeps power trace shorter and wider.</li>
+<li>Avoid default names like <code>N0001</code>.</li>
+<li>Use meaningful labels (e.g., <code>FLEX_OUT</code>, <code>ADC_VIN</code>, <code>5V_IN</code>, <code>MOTOR_EN</code>, etc.).</li>
+<li>If the flex sensor readings saturate or the hinge angle exceeds its bend rating.</li>
 <li>Mount the flex sensor on a <strong>thin flexible silicon strip</strong> or similar compliant material</li>
 <li>This allows the door to move fully without forcing the sensor to bend beyond its limit.</li>
 </ul>
-</li>
-</ol>
 <hr>
 
 
