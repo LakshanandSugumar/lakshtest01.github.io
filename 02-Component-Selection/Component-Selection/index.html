@@ -1189,8 +1189,8 @@ on the PCB for field connections; <strong>0.1″ headers</strong> for bench adap
 </tbody>
 </table>
 <p><strong>Choice:</strong> <strong>PIC18F57Q43 Curiosity Nano</strong>
-<a href="../../image/pic18f57q43-nano.webp">Curiosity Nano</a>
-<strong>Rationale:</strong> Lowest risk and fastest path for this course: on-board debugger, USB power, and immediate access to RA0/RA2 (ADC) + RA1/RB2/RC4 (digital outs). Provided in class</p>
+<a href="../../image/pic18f57q43-nano.webp">Curiosity Nano</a></p>
+<p><strong>Rationale:</strong> Lowest risk and fastest path for this course: on-board debugger, USB power, and immediate access to RA0/RA2 (ADC) + RA1/RB2/RC4 (digital outs). Provided in class</p>
 <hr>
 <h2 id="pin-table">Pin Table</h2>
 <table>
@@ -1210,7 +1210,7 @@ on the PCB for field connections; <strong>0.1″ headers</strong> for bench adap
 <tr>
 <td>Rotary sensor ADC <em>(external)</em></td>
 <td><strong>RA2 / AN2</strong></td>
-<td>From Rotary subsystem (interface only)</td>
+<td>From Rotary subsystem(if DAC)</td>
 </tr>
 <tr>
 <td>Motor control 1 (digital out)</td>
@@ -1226,6 +1226,11 @@ on the PCB for field connections; <strong>0.1″ headers</strong> for bench adap
 <td>Motor control 3 (digital out)</td>
 <td><strong>RC4</strong></td>
 <td>〃</td>
+</tr>
+<tr>
+<td>Rotary Sensor (digital out)</td>
+<td><strong>RF1</strong></td>
+<td>From Rotary Subsystem(if UART used)</td>
 </tr>
 </tbody>
 </table>
