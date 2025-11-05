@@ -2,7 +2,6 @@
 title: Component Selection (Individual — Flex Sensor Subsystem)
 ---
 
-
 ## **Block: Flex Sensor**
 
 **Role:** Measures bend angle; resistance increases with bend. Routed through a divider to 0–5 V for the ADC.
@@ -99,17 +98,20 @@ on the PCB for field connections; **0.1″ headers** for bench adapters.
 
 **Choice:** **PIC18F57Q43 Curiosity Nano**
 [Curiosity Nano](../image/pic18f57q43-nano.webp)
+
 **Rationale:** Lowest risk and fastest path for this course: on-board debugger, USB power, and immediate access to RA0/RA2 (ADC) + RA1/RB2/RC4 (digital outs). Provided in class
 
 ---
+
 ## Pin Table
 
-| Function                       | PIC Pin       | Notes                                  |
-| ------------------------------ | ------------- | -------------------------------------- |
-| Flex sensor ADC                | **RA0 / AN0** | Divider output 0–5 V                   |
-| Rotary sensor ADC _(external)_ | **RA2 / AN2** | From Rotary subsystem (interface only) |
-| Motor control 1 (digital out)  | **RA1**       | To Motor subsystem via Connector 2     |
-| Motor control 2 (digital out)  | **RB2**       | 〃                                     |
-| Motor control 3 (digital out)  | **RC4**       | 〃                                     |
+| Function                       | PIC Pin       | Notes                               |
+| ------------------------------ | ------------- | ----------------------------------- |
+| Flex sensor ADC                | **RA0 / AN0** | Divider output 0–5 V                |
+| Rotary sensor ADC _(external)_ | **RA2 / AN2** | From Rotary subsystem(if DAC)       |
+| Motor control 1 (digital out)  | **RA1**       | To Motor subsystem via Connector 2  |
+| Motor control 2 (digital out)  | **RB2**       | 〃                                  |
+| Motor control 3 (digital out)  | **RC4**       | 〃                                  |
+| Rotary Sensor (digital out)    | **RF1**       | From Rotary Subsystem(if UART used) |
 
 ---
