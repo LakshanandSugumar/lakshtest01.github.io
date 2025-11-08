@@ -17,3 +17,23 @@ title: Appendix – Inputs from Design Review
 - This allows the door to move fully without forcing the sensor to bend beyond its limit.
 
 ---
+
+### Feedback from Dr.Aukes
+
+-"Flex Sensor" was obscured by another element. — corrected
+
+-Block spacing was inconsistent, and connectors were not attached to block edges. — corrected
+
+-"Interfaces" (connection points) were incorrectly placed inside blocks instead of on their boundaries. — corrected
+
+-Text was missing on arrows; double-clicking on the arrow to add text has been done. — corrected
+
+-Font sizes were inconsistent across the document and among teammates; uniform font sizing has been applied. — corrected
+
+-The voltage “region” is now used instead of a separate voltage regulator box to reduce unnecessary wiring. — corrected
+
+-Connector I/O details have been clearly provided. — corrected
+
+-ADC1 has been labeled and accompanied by uniquely formatted notes. — corrected
+
+-Overall formatting and labeling have been improved for clarity and consistency. — corrected
