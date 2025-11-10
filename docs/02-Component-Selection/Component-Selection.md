@@ -103,15 +103,64 @@ on the PCB for field connections; **0.1″ headers** for bench adapters.
 
 ---
 
+**Unregulated Power Supply**
+
+1. Wall Adapter Power Supply - 12VDC, 600mA (Barrel Jack)
+
+   ![](<Wall Adapter Power Supply - 12VDC, 600mA (Barrel Jack).webp>)
+
+   - $9.25/each
+   - [link to product](https://www.sparkfun.com/wall-adapter-power-supply-12vdc-600ma-barrel-jack.html)
+
+   | Pros               | Cons                      |
+   | ------------------ | ------------------------- |
+   | High voltage       | Expensive                 |
+   | Enough current     | Only needed for the motor |
+   | Uses a barrel jack | Not a well known supplier |
+
+1. Switching Split Power Supply ± 12V 500mA Split Supply
+
+   ![](<Switching Split Power Supply ± 12V 500mA Split Supply.jpg>)
+
+   - $14.95/each
+   - [Link to product](https://www.adafruit.com/product/2591)
+
+   | Pros                 | Cons                                                              |
+   | -------------------- | ----------------------------------------------------------------- |
+   | Multiple jacks       | If used with other things would need a seperate voltage regulator |
+   | Not too much current | Might not need the white power supply line                        |
+   | Up to 12 V           | Short cord length                                                 |
+
+1. 12V 5A switching power supply
+
+   ![](<12V 5A switching power supply.jpg>)
+
+   - $24.95/each
+   - [Link to product](https://www.adafruit.com/product/352)
+
+   | Pros                                                         | Cons                         |
+   | ------------------------------------------------------------ | ---------------------------- |
+   | Up to 12 V                                                   | High current                 |
+   | You can use any plug adapter                                 | Expensive                    |
+   | There's a green indicator light to let you know it's working | Bulky in the middle of wires |
+
+**Choice:** **12V 5A switching power supply**
+[12V 5A switching power supply](MFG_QFWB-36-12-US01_sml.webp)
+
+**Rationale:** Though the supplier is not as well known and the data sheet is harder to understand, this had enough current without going overboard since this will power the whole system and not just this subsystem.
+
+--
+
 ## Pin Table
 
-| Function                       | PIC Pin       | Notes                               |
-| ------------------------------ | ------------- | ----------------------------------- |
-| Flex sensor ADC                | **RA0 / AN0** | Divider output 0–5 V                |
-| Rotary sensor ADC _(external)_ | **RA2 / AN2** | From Rotary subsystem(if DAC)       |
-| Motor control 1 (digital out)  | **RA1**       | To Motor subsystem via Connector 2  |
-| Motor control 2 (digital out)  | **RB2**       | 〃                                  |
-| Motor control 3 (digital out)  | **RC4**       | 〃                                  |
-| Rotary Sensor (digital out)    | **RF1**       | From Rotary Subsystem(if UART used) |
+| Function                       | PIC Pin       | Notes                                |
+| ------------------------------ | ------------- | ------------------------------------ |
+| Flex sensor ADC                | **RA0**       | Divider output 0–5 V                 |
+| Rotary sensor ADC _(external)_ | **RA2 / RF1** | From Rotary subsystem(if DAC)        |
+| Motor control 1 (digital in)   | **RA1**       | From Motor subsystem via Connector 2 |
+| Motor control 2 (digital out)  | **RB2**       | To Flex Sensor to Motor Subsystem    |
+| Rotary Sensor (digital out)    | **RF1**       | From Rotary Subsystem (if UART used) |
+| LED                            | **RA3**       | Flex Sensor Reading Errors           |
+| Switch                         | **RC3**       | To turn off flex sensor reading      |
 
 ---
