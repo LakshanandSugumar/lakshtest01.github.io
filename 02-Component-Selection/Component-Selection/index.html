@@ -1258,6 +1258,101 @@ on the PCB for field connections; <strong>0.1″ headers</strong> for bench adap
 <a href="../../image/pic18f57q43-nano.webp">Curiosity Nano</a></p>
 <p><strong>Rationale:</strong> Lowest risk and fastest path for this course: on-board debugger, USB power, and immediate access to RA0/RA2 (ADC) + RA1/RB2/RC4 (digital outs). Provided in class</p>
 <hr>
+<p><strong>Unregulated Power Supply</strong></p>
+<ol>
+<li>Wall Adapter Power Supply - 12VDC, 600mA (Barrel Jack)</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="Wall Adapter Power Supply - 12VDC, 600mA (Barrel Jack).webp" data-desc-position="bottom"><img alt="" src="Wall Adapter Power Supply - 12VDC, 600mA (Barrel Jack).webp"></a></p>
+<ul>
+<li>$9.25/each</li>
+<li><a href="https://www.sparkfun.com/wall-adapter-power-supply-12vdc-600ma-barrel-jack.html">link to product</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>High voltage</td>
+<td>Expensive</td>
+</tr>
+<tr>
+<td>Enough current</td>
+<td>Only needed for the motor</td>
+</tr>
+<tr>
+<td>Uses a barrel jack</td>
+<td>Not a well known supplier</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Switching Split Power Supply ± 12V 500mA Split Supply</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="Switching Split Power Supply ± 12V 500mA Split Supply.jpg" data-desc-position="bottom"><img alt="" src="Switching Split Power Supply ± 12V 500mA Split Supply.jpg"></a></p>
+<ul>
+<li>$14.95/each</li>
+<li><a href="https://www.adafruit.com/product/2591">Link to product</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Multiple jacks</td>
+<td>If used with other things would need a seperate voltage regulator</td>
+</tr>
+<tr>
+<td>Not too much current</td>
+<td>Might not need the white power supply line</td>
+</tr>
+<tr>
+<td>Up to 12 V</td>
+<td>Short cord length</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>12V 5A switching power supply</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="12V 5A switching power supply.jpg" data-desc-position="bottom"><img alt="" src="12V 5A switching power supply.jpg"></a></p>
+<ul>
+<li>$24.95/each</li>
+<li><a href="https://www.adafruit.com/product/352">Link to product</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Up to 12 V</td>
+<td>High current</td>
+</tr>
+<tr>
+<td>You can use any plug adapter</td>
+<td>Expensive</td>
+</tr>
+<tr>
+<td>There's a green indicator light to let you know it's working</td>
+<td>Bulky in the middle of wires</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Choice:</strong> <strong>12V 5A switching power supply</strong>
+<a href="../MFG_QFWB-36-12-US01_sml.webp">12V 5A switching power supply</a></p>
+<p><strong>Rationale:</strong> Though the supplier is not as well known and the data sheet is harder to understand, this had enough current without going overboard since this will power the whole system and not just this subsystem.</p>
+<p>--</p>
 <h2 id="pin-table">Pin Table</h2>
 <table>
 <thead>
@@ -1270,33 +1365,38 @@ on the PCB for field connections; <strong>0.1″ headers</strong> for bench adap
 <tbody>
 <tr>
 <td>Flex sensor ADC</td>
-<td><strong>RA0 / AN0</strong></td>
+<td><strong>RA0</strong></td>
 <td>Divider output 0–5 V</td>
 </tr>
 <tr>
 <td>Rotary sensor ADC <em>(external)</em></td>
-<td><strong>RA2 / AN2</strong></td>
+<td><strong>RA2 / RF1</strong></td>
 <td>From Rotary subsystem(if DAC)</td>
 </tr>
 <tr>
-<td>Motor control 1 (digital out)</td>
+<td>Motor control 1 (digital in)</td>
 <td><strong>RA1</strong></td>
-<td>To Motor subsystem via Connector 2</td>
+<td>From Motor subsystem via Connector 2</td>
 </tr>
 <tr>
 <td>Motor control 2 (digital out)</td>
 <td><strong>RB2</strong></td>
-<td>〃</td>
-</tr>
-<tr>
-<td>Motor control 3 (digital out)</td>
-<td><strong>RC4</strong></td>
-<td>〃</td>
+<td>To Flex Sensor to Motor Subsystem</td>
 </tr>
 <tr>
 <td>Rotary Sensor (digital out)</td>
 <td><strong>RF1</strong></td>
-<td>From Rotary Subsystem(if UART used)</td>
+<td>From Rotary Subsystem (if UART used)</td>
+</tr>
+<tr>
+<td>LED</td>
+<td><strong>RA3</strong></td>
+<td>Flex Sensor Reading Errors</td>
+</tr>
+<tr>
+<td>Switch</td>
+<td><strong>RC3</strong></td>
+<td>To turn off flex sensor reading</td>
 </tr>
 </tbody>
 </table>
