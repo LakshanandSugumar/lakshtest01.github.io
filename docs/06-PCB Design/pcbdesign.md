@@ -6,5 +6,5 @@ The PCB layout includes a two-layer design (top and bottom copper), with clear r
 
 The Zip folder of the project can be downloaded by . **[Cliking here](individual_subsystem.zip)**
 
-The PDF of the board can be downloaded by . **[Cliking here](schematics.pdf)**
+The PDF of the board can be downloaded by . **[Cliking here](finalpcb.pdf)**
 Gerber Files can be download by **[Cliking here](project.zip.zip)**
