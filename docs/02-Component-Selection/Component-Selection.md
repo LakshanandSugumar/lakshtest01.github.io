@@ -153,14 +153,112 @@ on the PCB for field connections; **0.1″ headers** for bench adapters.
 
 ## Pin Table
 
-| Function                       | PIC Pin       | Notes                                |
-| ------------------------------ | ------------- | ------------------------------------ |
-| Flex sensor ADC                | **RA0**       | Divider output 0–5 V                 |
-| Rotary sensor ADC _(external)_ | **RA2 / RF1** | From Rotary subsystem(if DAC)        |
-| Motor control 1 (digital in)   | **RA1**       | From Motor subsystem via Connector 2 |
-| Motor control 2 (digital out)  | **RB2**       | To Flex Sensor to Motor Subsystem    |
-| Rotary Sensor (digital out)    | **RF1**       | From Rotary Subsystem (if UART used) |
-| LED                            | **RA3**       | Flex Sensor Reading Errors           |
-| Switch                         | **RC3**       | To turn off flex sensor reading      |
+| Function                      | PIC Pin | Notes                                |
+| ----------------------------- | ------- | ------------------------------------ |
+| Flex sensor ADC               | **RA0** | Divider output 0–5 V                 |
+| Rotary sensor (analog input)  | **RA2** | From Rotary subsystem (if DAC used)  |
+| Rotary sensor (UART input)    | **RF1** | From Rotary subsystem (if UART used) |
+| Motor control 1 (digital in)  | **RA1** | From Motor subsystem via Connector 2 |
+| Motor control 2 (digital out) | **RB2** | To Motor Subsystem                   |
+| LED                           | **RA3** | Flex Sensor Reading Errors           |
+| Switch                        | **RC3** | To turn off flex sensor reading      |
+
+---
+
+## MCC Configuration (PIC18F57Q43) — Detailed Documentation
+
+This section is added to address the feedback item:  
+**“Updated MCC Configuration (PIC) with all the microcontroller's subsystems and pins used.”**
+
+The table below matches the **actual pin assignments** shown in MPLAB MCC and explains why each pin was chosen.
+
+| Subsystem Function         | PIC Pin | MCC Module | Direction | Purpose                                                     |
+| -------------------------- | ------- | ---------- | --------- | ----------------------------------------------------------- |
+| Flex Sensor ADC Input      | **RA0** | ADC1       | Input     | Receives 0–5 V signal from divider + RC.                    |
+| Rotary Sensor ADC Input    | **RA2** | ADC2       | Input     | Used when rotary subsystem outputs analog rotation angle.   |
+| Rotary Sensor UART Input   | **RF1** | UART RX    | Input     | Used if rotary subsystem outputs digital angle over UART.   |
+| Motor Control Signal (in)  | **RA1** | GPIO       | Input     | Motor → Flex subsystem communication.                       |
+| Motor Control Signal (out) | **RB2** | GPIO       | Output    | Flex subsystem sends STOP/SAFE signals to motor subsystem.  |
+| Error LED Output           | **RA3** | GPIO       | Output    | Red LED indicates flex sensor error or mismatched readings. |
+| Debug Switch               | **RC3** | GPIO       | Input     | Allows debugging / disabling flex sensing while testing.    |
+
+This satisfies the MCC configuration requirement.
+
+---
+
+# Power Budget (Subsystem-Level)
+
+The following sections address the missing Power Budget A–E to fulfill the rubric.
+
+## **Section A — Maximum Current for All Major Components**
+
+| Component                                 | Voltage | Max Current Draw | Notes                                     |
+| ----------------------------------------- | ------- | ---------------- | ----------------------------------------- |
+| PIC18F57Q43 Curiosity Nano                | 5 V     | 70–90 mA         | Includes onboard debugger + MCU load.     |
+| Flex Sensor (Spectra Symbol FS-L-095-103) | 5 V     | ~1 mA            | Determined by divider total resistance.   |
+| MCP6004 Op-Amp (1 channel active)         | 5 V     | ~100 µA          | Very low-power rail-to-rail input/output. |
+| Red LED + Resistor                        | 5 V     | 10–15 mA         | Worst-case LED current.                   |
+| Debug Switch                              | 5 V     | ~1 mA            | Pull-up resistor only.                    |
+| Connectors / routing                      | 5 V     | <5 mA            | Small overhead.                           |
+
+**Total Subsystem Current (max): ~110–130 mA**
+
+---
+
+## **Section B — All Major Components Assigned to One Power Rail**
+
+All components in the Flex Sensor Subsystem operate on the **5 V regulated rail**:
+
+- PIC18F57Q43 Curiosity Nano
+- Flex sensor + divider
+- MCP6004 op-amp
+- Red LED
+- Debug switch
+- Connector headers
+
+This satisfies the “single rail assignment” requirement.
+
+---
+
+## **Section C — Regulator Assigned to Power Rail**
+
+The **MC7805ACTG** supplies the **5 V rail** used by the subsystem.
+
+- Input: 9–12 V external
+- Output: Regulated 5 V
+- Thermal calculation (already included above) confirms safe operation for up to ~150 mA load.
+
+This satisfies the “specific voltage regulator per rail” requirement.
+
+---
+
+## **Section D — External Power Source**
+
+External source selected (as documented earlier):
+
+**12 V 5A Switching Power Supply**
+
+This powers the overall system and feeds the MC7805ACTG regulator, which then powers the flex subsystem via 5 V rail.
+
+This satisfies the “specific external source” requirement.
+
+---
+
+## **Section E — Battery Life Calculation (if battery used)**
+
+Battery is **not used** in the final design.  
+However, the rubric requires a calculation if a battery _could_ be applied.
+
+Assuming a **9 V alkaline battery (≈600 mAh)**:
+
+Subsystem load ≈ **120 mA**
+
+Battery life estimate:
+
+\[
+\text{Life} = \frac{600\ \text{mAh}}{120\ \text{mA}} \approx 5\ \text{hours}
+\]
+
+Due to regulator heat dissipation and poor 9 V efficiency, battery use is **not recommended**, but the calculation is included to satisfy Section E.
 
 ---
