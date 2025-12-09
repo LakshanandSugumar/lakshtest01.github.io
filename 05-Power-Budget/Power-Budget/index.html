@@ -15,7 +15,7 @@
         <link rel="prev" href="../../04-Schematic/schematic/">
       
       
-        <link rel="next" href="../example-power-budget/">
+        <link rel="next" href="../readme/">
       
       
       <link rel="icon" href="../../static/logo304.png">
@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overview" class="md-skip">
+        <a href="#power-budget" class="md-skip">
           Skip to content
         </a>
       
@@ -703,8 +703,6 @@
       
         
       
-        
-      
     
     
       
@@ -754,6 +752,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -782,6 +782,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -799,62 +801,20 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#power-budget-subsystem-level" class="md-nav__link">
+  <a href="#conclusions" class="md-nav__link">
     <span class="md-ellipsis">
-      Power Budget (Subsystem-Level)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Power Budget (Subsystem-Level)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#section-a-maximum-current-for-all-major-components" class="md-nav__link">
-    <span class="md-ellipsis">
-      Section A — Maximum Current for All Major Components
+      Conclusions
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#section-b-all-major-components-assigned-to-one-power-rail" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
     <span class="md-ellipsis">
-      Section B — All Major Components Assigned to One Power Rail
+      Resources
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#section-c-regulator-assigned-to-power-rail" class="md-nav__link">
-    <span class="md-ellipsis">
-      Section C — Regulator Assigned to Power Rail
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#section-d-external-power-source" class="md-nav__link">
-    <span class="md-ellipsis">
-      Section D — External Power Source
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#section-e-battery-life-calculation-if-battery-used" class="md-nav__link">
-    <span class="md-ellipsis">
-      Section E — Battery Life Calculation (if battery used)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -862,27 +822,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../example-power-budget/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Example Power Budget
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -1209,6 +1148,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1226,62 +1167,20 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#power-budget-subsystem-level" class="md-nav__link">
+  <a href="#conclusions" class="md-nav__link">
     <span class="md-ellipsis">
-      Power Budget (Subsystem-Level)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Power Budget (Subsystem-Level)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#section-a-maximum-current-for-all-major-components" class="md-nav__link">
-    <span class="md-ellipsis">
-      Section A — Maximum Current for All Major Components
+      Conclusions
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#section-b-all-major-components-assigned-to-one-power-rail" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
     <span class="md-ellipsis">
-      Section B — All Major Components Assigned to One Power Rail
+      Resources
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#section-c-regulator-assigned-to-power-rail" class="md-nav__link">
-    <span class="md-ellipsis">
-      Section C — Regulator Assigned to Power Rail
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#section-d-external-power-source" class="md-nav__link">
-    <span class="md-ellipsis">
-      Section D — External Power Source
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#section-e-battery-life-calculation-if-battery-used" class="md-nav__link">
-    <span class="md-ellipsis">
-      Section E — Battery Life Calculation (if battery used)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1308,108 +1207,45 @@
   
 
 
+<h1 id="power-budget">Power Budget</h1>
 <h2 id="overview">Overview</h2>
-<p>This page presents the power budget for all major components across the four subsystems of the automatic door opener. The power budget was developed to estimate the maximum possible current draw from each major electrical component and to outline how power is distributed and supplied throughout the system. This analysis ensures that all power sources and voltage regulators are properly rated to deliver the required current to each subsystem without risk of overloading or power failure.</p>
+<p>This page presents the <strong>final power budget</strong> for the automatic door opener. The goal of the power budget is to estimate the <strong>maximum possible current draw</strong> from each major subsystem and verify that our chosen power supplies and voltage regulators are correctly sized.</p>
+<p>The team uses a <strong>single 12 V system supply</strong> (shared by the motor and all electronic subsystems). Each subsystem then regulates down to its required voltage (for example, 5 V for the PIC18F57Q43 Curiosity Nano and sensors). The power budget spreadsheet uses the course template: every major component is listed with its operating voltage, maximum current (from datasheets), and a 25% margin column.</p>
 <blockquote>
-<p>Capture your power budge as a image to display. Take time to get clean breaks and a well organized layout.</p>
+<p>Capture your power budget as an image to display. Take time to get clean breaks and a well organized layout.</p>
 </blockquote>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../power.png" data-desc-position="bottom"><img alt="budget1" height:_300_="height:&quot;300;&quot;" src="../power.png" style="style" width:_350_="width:&quot;350&quot;"></a></p>
-<p>Conclusions</p>
-<p>Based on the prepared Power Budget, the subsystem operates well within a safe and reasonable current range, leaving additional capacity that can be utilized by other subsystems if needed. The team’s combined power budget analysis confirms that even with a 25% increase in total estimated current draw, the system still maintains sufficient power headroom to ensure stable and reliable operation across all components.</p>
-<p>Resources</p>
+<p>This image (<code>power.png</code>) is exported directly from the final team power budget spreadsheet and reflects the <strong>current, final design</strong> of all four subsystems.</p>
+<hr>
+<h2 id="conclusions">Conclusions</h2>
+<p>We used the power budget in the template to <strong>sum the maximum currents</strong> for:</p>
+<ul>
+<li>The <strong>motor subsystem</strong> (which dominates the 12 V current),</li>
+<li>The <strong>flex sensor subsystem</strong> (PIC18F57Q43 Nano, flex sensor, op-amp, LED, switch),</li>
+<li>The <strong>rotary encoder subsystem</strong>, and</li>
+<li>Any additional control or support electronics.</li>
+</ul>
+<p>From this spreadsheet we found:</p>
+<ul>
+<li>The <strong>total current at 12 V</strong> stays <strong>well below the 5 A rating</strong> of our chosen 12 V switching power supply, even after adding a <strong>25% safety margin</strong> to each subsystem row in the template.</li>
+<li>The <strong>flex sensor subsystem</strong> only draws on the order of <strong>~120 mA at 5 V</strong>, which confirms that our simple <strong>MC7805 5 V linear regulator</strong> is adequate and will not overheat in normal operation.</li>
+<li>Because all subsystems share the same 12 V source, the power budget helped ensure that the <strong>motor’s peak current plus all electronics</strong> still fit within the safe operating range of the supply and motor driver.</li>
+<li>The analysis also showed that trying to run the full system from a small 9 V battery would give limited runtime and poor efficiency, supporting our decision to stay with a <strong>wall-powered 12 V brick</strong> for this project.</li>
+</ul>
+<p>Overall, the power budget confirmed that:</p>
+<ul>
+<li>Our <strong>12 V 5 A supply</strong> provides enough headroom for all subsystems,</li>
+<li>Each regulator (especially the 5 V regulator for the flex subsystem) operates within its safe current and thermal limits, and</li>
+<li>The design can tolerate reasonable future additions (extra indicators, small sensors) without needing a complete power redesign.</li>
+</ul>
+<hr>
+<h2 id="resources">Resources</h2>
 <p>Power Budget (PNG): <a href="../power.png"><em>here</em></a></p>
-<p>Power Budget (Excel Sheet): <a href="../PowerBudget.xlsx"><em>here</em></a>.</p>
-<h1 id="power-budget-subsystem-level">Power Budget (Subsystem-Level)</h1>
-<p>The following sections address the missing Power Budget A–E to fulfill the rubric.</p>
-<h2 id="section-a-maximum-current-for-all-major-components"><strong>Section A — Maximum Current for All Major Components</strong></h2>
-<table>
-<thead>
-<tr>
-<th>Component</th>
-<th>Voltage</th>
-<th>Max Current Draw</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>PIC18F57Q43 Curiosity Nano</td>
-<td>5 V</td>
-<td>70–90 mA</td>
-<td>Includes onboard debugger + MCU load.</td>
-</tr>
-<tr>
-<td>Flex Sensor (Spectra Symbol FS-L-095-103)</td>
-<td>5 V</td>
-<td>~1 mA</td>
-<td>Determined by divider total resistance.</td>
-</tr>
-<tr>
-<td>MCP6004 Op-Amp (1 channel active)</td>
-<td>5 V</td>
-<td>~100 µA</td>
-<td>Very low-power rail-to-rail input/output.</td>
-</tr>
-<tr>
-<td>Red LED + Resistor</td>
-<td>5 V</td>
-<td>10–15 mA</td>
-<td>Worst-case LED current.</td>
-</tr>
-<tr>
-<td>Debug Switch</td>
-<td>5 V</td>
-<td>~1 mA</td>
-<td>Pull-up resistor only.</td>
-</tr>
-<tr>
-<td>Connectors / routing</td>
-<td>5 V</td>
-<td>&lt;5 mA</td>
-<td>Small overhead.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Total Subsystem Current (max): ~110–130 mA</strong></p>
-<hr>
-<h2 id="section-b-all-major-components-assigned-to-one-power-rail"><strong>Section B — All Major Components Assigned to One Power Rail</strong></h2>
-<p>All components in the Flex Sensor Subsystem operate on the <strong>5 V regulated rail</strong>:</p>
-<ul>
-<li>PIC18F57Q43 Curiosity Nano</li>
-<li>Flex sensor + divider</li>
-<li>MCP6004 op-amp</li>
-<li>Red LED</li>
-<li>Debug switch</li>
-<li>Connector headers</li>
-</ul>
-<p>This satisfies the “single rail assignment” requirement.</p>
-<hr>
-<h2 id="section-c-regulator-assigned-to-power-rail"><strong>Section C — Regulator Assigned to Power Rail</strong></h2>
-<p>The <strong>MC7805ACTG</strong> supplies the <strong>5 V rail</strong> used by the subsystem.</p>
-<ul>
-<li>Input: 9–12 V external</li>
-<li>Output: Regulated 5 V</li>
-<li>Thermal calculation (already included above) confirms safe operation for up to ~150 mA load.</li>
-</ul>
-<p>This satisfies the “specific voltage regulator per rail” requirement.</p>
-<hr>
-<h2 id="section-d-external-power-source"><strong>Section D — External Power Source</strong></h2>
-<p>External source selected (as documented earlier):</p>
-<p><strong>12 V 5A Switching Power Supply</strong></p>
-<p>This powers the overall system and feeds the MC7805ACTG regulator, which then powers the flex subsystem via 5 V rail.</p>
-<p>This satisfies the “specific external source” requirement.</p>
-<hr>
-<h2 id="section-e-battery-life-calculation-if-battery-used"><strong>Section E — Battery Life Calculation (if battery used)</strong></h2>
-<p>Battery is <strong>not used</strong> in the final design.<br>
-However, the rubric requires a calculation if a battery <em>could</em> be applied.</p>
-<p>Assuming a <strong>9 V alkaline battery (≈600 mAh)</strong>:</p>
-<p>Subsystem load ≈ <strong>120 mA</strong></p>
-<p>Battery life estimate:</p>
-<div class="arithmatex">\[
-\text{Life} = \frac{600\ \text{mAh}}{120\ \text{mA}} \approx 5\ \text{hours}
-\]</div>
-<p>Due to regulator heat dissipation and poor 9 V efficiency, battery use is <strong>not recommended</strong>, but the calculation is included to satisfy Section E.</p>
-<hr>
+<p>Power Budget (Excel Sheet): <a href="../PowerBudget.xlsx"><em>here</em></a></p>
+<p><br></p>
+<p><a href="PowerBudget.xlsx" download style="display:inline-block; padding:0.5rem 1rem; background:#007bff; color:white; border-radius:4px; text-decoration:none;">
+⬇️ Download Power Budget (Excel)
+</a></p>
 
 
 
@@ -1465,13 +1301,13 @@ However, the rubric requires a calculation if a battery <em>could</em> be applie
         
         
           
-          <a href="../example-power-budget/" class="md-footer__link md-footer__link--next" aria-label="Next: Example Power Budget">
+          <a href="../readme/" class="md-footer__link md-footer__link--next" aria-label="Next: Power Budget">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Example Power Budget
+                Power Budget
               </div>
             </div>
             <div class="md-footer__button md-icon">
