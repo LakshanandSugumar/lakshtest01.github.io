@@ -32,6 +32,7 @@ The Flex Sensor Subsystem acts as a **feedback + validation node** in the overal
 The rotary sensor signals shown on the right side of the diagram are _external inputs_ and are not part of this subsystem’s hardware. They are included to document the communication pathway and show how this subsystem cooperates with others to maintain correct and safe system behavior.
 
 [draw.io](https://drive.google.com/file/d/1aowyaz1jB5e_mhioJ-Hf5ubIlwDby4pD/view?usp=sharing)
+![Flex Sensor Subsystem Block diagram-Updated](<https://github.com/LakshanandSugumar/lakshtest01.github.io/blob/main/docs/01-Block-Diagram/individual_block_diagram.drawio%20(3).png>)
 
 ---
 
