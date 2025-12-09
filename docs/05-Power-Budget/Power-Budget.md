@@ -10,8 +10,6 @@ This page presents the **final power budget** for the automatic door opener. The
 
 The team uses a **single 12 V system supply** (shared by the motor and all electronic subsystems). Each subsystem then regulates down to its required voltage (for example, 5 V for the PIC18F57Q43 Curiosity Nano and sensors). The power budget spreadsheet uses the course template: every major component is listed with its operating voltage, maximum current (from datasheets), and a 25% margin column.
 
-> Capture your power budget as an image to display. Take time to get clean breaks and a well organized layout.
-
 ![budget1](power.png){style width:"350" height:"300;"}
 
 This image (`power.png`) is exported directly from the final team power budget spreadsheet and reflects the **current, final design** of all four subsystems.
@@ -47,10 +45,3 @@ Overall, the power budget confirmed that:
 Power Budget (PNG): [_here_](power.png)
 
 Power Budget (Excel Sheet): [_here_](PowerBudget.xlsx)
-
-<br>
-
-<a href="PowerBudget.xlsx" download
-   style="display:inline-block; padding:0.5rem 1rem; background:#007bff; color:white; border-radius:4px; text-decoration:none;">
-⬇️ Download Power Budget (Excel)
-</a>
