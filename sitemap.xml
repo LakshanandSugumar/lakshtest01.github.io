@@ -51,6 +51,21 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://embedded-systems-design.github.io/EGR304DataSheetTemplate/08-Hardware%20V2.0/hardware/</loc>
+         <lastmod>2025-12-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://embedded-systems-design.github.io/EGR304DataSheetTemplate/09-%20Resource/resource/</loc>
+         <lastmod>2025-12-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://embedded-systems-design.github.io/EGR304DataSheetTemplate/10-Lesson%20Learned/lesson/</loc>
+         <lastmod>2025-12-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://embedded-systems-design.github.io/EGR304DataSheetTemplate/Appendix/Inputs%20from%20Design%20Review/</loc>
          <lastmod>2025-12-09</lastmod>
          <changefreq>daily</changefreq>
