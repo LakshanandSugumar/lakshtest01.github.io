@@ -13,6 +13,12 @@ Gerber Files can be download by **[Cliking here](project.zip.zip)**
 
 The ECAD image above (`schem6.png`) shows the final routed PCB, including both the top and bottom copper layers. It represents the final board outline, mounting holes, component footprints, and power/signal routing for the flex sensor subsystem.
 
+**Top Copper Layer (ECAD)**  
+![ECAD Top Layer](art-top.png)
+
+**Bottom Copper Layer (ECAD)**  
+![ECAD Bottom Layer](art-bottom.png)
+
 If needed, separate ECAD views (top and bottom only) can also be exported from the ECAD tool and added here, but `schem6.png` is the primary ECAD view for this design.
 
 ---
