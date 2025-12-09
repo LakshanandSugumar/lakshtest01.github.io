@@ -89,6 +89,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#ecad-pcb-design-frontback" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -796,6 +801,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Pcbdesign
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -805,6 +821,50 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ecad-pcb-design-frontback" class="md-nav__link">
+    <span class="md-ellipsis">
+      ECAD PCB Design (Front/Back)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fabricated-pcb-assembled-real-board-photos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fabricated PCB — Assembled (Real Board Photos)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ecad-and-gerber-archives-final-submission" class="md-nav__link">
+    <span class="md-ellipsis">
+      ECAD and Gerber Archives (Final Submission)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1066,6 +1126,41 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ecad-pcb-design-frontback" class="md-nav__link">
+    <span class="md-ellipsis">
+      ECAD PCB Design (Front/Back)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fabricated-pcb-assembled-real-board-photos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fabricated PCB — Assembled (Real Board Photos)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ecad-and-gerber-archives-final-submission" class="md-nav__link">
+    <span class="md-ellipsis">
+      ECAD and Gerber Archives (Final Submission)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1095,6 +1190,31 @@
 <p>The Zip folder of the project can be downloaded by . <strong><a href="../individual_subsystem.zip">Cliking here</a></strong></p>
 <p>The PDF of the board can be downloaded by . <strong><a href="../finalpcb.pdf">Cliking here</a></strong>
 Gerber Files can be download by <strong><a href="../project.zip.zip">Cliking here</a></strong></p>
+<hr>
+<h2 id="ecad-pcb-design-frontback">ECAD PCB Design (Front/Back)</h2>
+<p>The ECAD image above (<code>schem6.png</code>) shows the final routed PCB, including both the top and bottom copper layers. It represents the final board outline, mounting holes, component footprints, and power/signal routing for the flex sensor subsystem.</p>
+<p>If needed, separate ECAD views (top and bottom only) can also be exported from the ECAD tool and added here, but <code>schem6.png</code> is the primary ECAD view for this design.</p>
+<hr>
+<h2 id="fabricated-pcb-assembled-real-board-photos">Fabricated PCB — Assembled (Real Board Photos)</h2>
+<p>The following images are photographs of the <strong>real, fabricated PCB</strong> after assembly and soldering. These satisfy the requirement for final PCB photos, front and back, after population and testing.</p>
+<p><strong>Assembled PCB Front (real board)</strong></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../pcb-front.png" data-desc-position="bottom"><img alt="Assembled PCB Front" src="../pcb-front.png"></a></p>
+<p><strong>Assembled PCB Back (real board)</strong></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../pcb-back.png" data-desc-position="bottom"><img alt="Assembled PCB Back" src="../pcb-back.png"></a></p>
+<p>The assembled board was verified for:</p>
+<ul>
+<li>Correct 5 V regulation from the external supply</li>
+<li>Proper routing of the flex sensor signal into the ADC</li>
+<li>Correct operation of the LED indicator and debug switch</li>
+<li>Continuity and absence of unintended shorts on power and ground planes</li>
+</ul>
+<hr>
+<h2 id="ecad-and-gerber-archives-final-submission">ECAD and Gerber Archives (Final Submission)</h2>
+<p>For manufacturing and reproducibility, the final ECAD design files and Gerber outputs are provided as ZIP archives in this repository.</p>
+<ul>
+<li><strong>Final ECAD Project (.zip):</strong> <a href="ecad.zip">Download ECAD Project</a></li>
+<li><strong>Final Gerber Files (.zip):</strong> <a href="gerber.zip">Download Gerber Files</a></li>
+</ul>
 
 
 
