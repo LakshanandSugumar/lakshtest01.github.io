@@ -5,7 +5,7 @@
 The schematic shows all connections for the PIC18F57Q43 Curiosity Nano, power regulation, sensor input, and interface headers.  
 Bypass capacitors (0.1 µF) are placed near each VDD pin. The regulator receives 9–12 V from an external adapter and provides a clean 5 V rail to the board.
 
-The PDF of the schematic can be downloaded by . **[Cliking here] (final.pdf)**
+The PDF of the schematic can be viewed and downloaded by **[Github](https://github.com/LakshanandSugumar/lakshtest01.github.io/blob/main/docs/04-Schematic/final.pdf)**.
 
 ---
 
